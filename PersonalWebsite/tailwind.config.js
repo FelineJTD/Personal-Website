@@ -11,6 +11,7 @@ module.exports = {
       xl: '1440px',
     },
     colors: {
+      'white': '#FFF9F4',
       'coral': {
         '100': '#FFE3D1',
         '200': '#EECAA7',
