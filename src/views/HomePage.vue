@@ -40,6 +40,8 @@ export default {
 // import Keyboard from '../components/Keyboard.vue'
 import Key from '../components/Key.vue'
 import Blank from '../components/Blank.vue'
+import HiImFeli from '../assets/homepage/hi_im_feli.svg'
+import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
 // import Key1 from '../components/Key.vue';
 
 // defineProps<{ msg: string }>()
@@ -64,14 +66,15 @@ import Blank from '../components/Blank.vue'
           <img src="../assets/homepage/bottom.png" class="absolute" :style="{ transform: `translate(${x*20}px, ${y*10}px)` }" />
           <img src="../assets/homepage/mid.png" class="absolute" :style="{ transform: `translate(${x*35}px, ${y*15}px)` }" />
           <img src="../assets/homepage/top.png" class="absolute" :style="{ transform: `translate(${x*50}px, ${y*15}px)` }" />
-          <img src="../assets/homepage/cover.svg" class="absolute" />
+          <img src="../assets/homepage/cover.png" class="absolute" />
           <img src="../assets/homepage/circles.png" class="absolute" :style="{ transform: `translate(${x*75}px, ${y*75}px)` }" />
           <img src="../assets/texture.png" class="absolute w-full h-full mix-blend-overlay" />
         </div>
       </div>
       <!-- right -->
       <div class="text-left">
-        <img src="../assets/homepage/hi_im_feli.svg" alt="Hi, I'm Feli" class="h-[4.5rem] -translate-x-3 mb-12" />
+        <HiImFeli class="h-[4.5rem] -translate-x-3 mb-12" />
+        <!-- <img src="../assets/homepage/hi_im_feli.svg" alt="Hi, I'm Feli" class="h-[4.5rem] -translate-x-3 mb-12" /> -->
         <h3 class="font-black">My <span class="text-coral-t">profession</span>?</h3>
         <h4>Why don't you guess it?</h4>
         <!-- hangman -->
@@ -130,7 +133,8 @@ import Blank from '../components/Blank.vue'
 
     <!--- SECTION II -->
     <section class="h-screen w-full bg-[url('./assets/homepage/section2.svg')] bg-no-repeat bg-cover pt-48 px-[8%]">
-      <img src="../assets/homepage/im_a_web_developer.svg" alt="I'm a web developer." class="h-[3rem] mb-12" />
+      <ImAWebDeveloper class="h-[3rem] mb-12" />
+      <!-- <img src="../assets/homepage/im_a_web_developer.svg" alt="I'm a web developer." class="h-[3rem] mb-12" /> -->
       <p class="text-left">
         I love art and coding. I specialise in frontend development, but I am currently expanding my knowledge of backend development. <br /><br />
         Let me show you some of the websites I&apos;ve made.
