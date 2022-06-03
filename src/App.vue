@@ -1,6 +1,4 @@
 <script lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HomePage from './views/HomePage.vue'
 import Portfolio from './views/Portfolio.vue'
 import About from './views/About.vue'
@@ -40,19 +38,14 @@ console.log(currentPath);
 </script>
 
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
-  <div>
-    <Navbar />
-    <main>
-      <component :is="currentView" />
-    </main>
-  </div>
+  <Navbar />
+  <main>
+    <component :is="currentView" />
+  </main>
 </template>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
