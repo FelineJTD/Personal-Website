@@ -10,8 +10,8 @@ defineProps<{
 </script>
 
 <template>
-  <div class="text-center relative">
-    <h4 v-if="filled" class="w-full absolute font-bold">{{ char }}</h4>
+  <div class="text-center relative px-1">
+    <h4 v-if="filled" class="absolute font-bold">{{ char }}</h4>
     <h3 class="font-bold">_</h3>
   </div>
 </template>

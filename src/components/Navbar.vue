@@ -1,15 +1,18 @@
 <script setup lang="ts">
+  import Home from "../assets/Home.svg"
+  import Portfolio from "../assets/Portfolio.svg"
+  import About from "../assets/About.svg"
 
-// defineProps<{ msg: string }>()
+defineProps<{ homeColor: string }>()
 
 // const count = ref(0)
 </script>
 
 <template>
-  <div class="bg-white h-12 flex justify-around items-center px-36 shadow-lg fixed w-full z-50">
-    <img src="../assets/Home.svg" alt="Home" class="h-6" />
-    <img src="../assets/Portfolio.svg" alt="Home" class="h-6" />
-    <img src="../assets/About.svg" alt="Home" class="h-6" />
+  <div class="bg-white h-12 flex justify-around items-center px-36 py-0.5 shadow-lg fixed w-full z-50">
+    <a href='/'><Home class="hover:fill-coral-t" /></a>
+    <a href='/portfolio'><Portfolio class="hover:fill-coral-t" /></a>
+    <a href="/about"><About class="hover:fill-coral-t" /></a>
   </div>
   <!-- <h1 class="text-white">{{ msg }}</h1> -->
 

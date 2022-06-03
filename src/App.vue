@@ -11,8 +11,6 @@ const routes = {
   '/about': About
 }
 
-// let currentPath = window.location.pathname;
-
 export default {
   data() {
     return {
