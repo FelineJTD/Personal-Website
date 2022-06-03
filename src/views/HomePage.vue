@@ -3,8 +3,16 @@ export default {
   name: 'HomePage',
   data() {
     return {
-      keyboard_pressed: '',
+      keyboard_pressed: new Map<string, boolean>(),
     };
+  },
+  methods: {
+    keyPressed(char: string) {
+      this.keyboard_pressed.set(char, true);
+    },
+    keyState(char: string) {
+      return this.keyboard_pressed.get(char);
+    },
   },
   components: {
     'Key': Key,
@@ -20,10 +28,10 @@ import Blank from '../components/Blank.vue'
 // defineProps<{ msg: string }>()
 
 // const count = ref(0)
-let keyboard_pressed = new Map<string, boolean>([
-  ["A", false],
-  ["E", false]
-]);
+// let keyboard_pressed = new Map<string, boolean>([
+//   ["A", false],
+//   ["E", false]
+// ]);
 </script>
 
 <template>
@@ -49,22 +57,52 @@ let keyboard_pressed = new Map<string, boolean>([
         <!-- hangman -->
         <div class="flex flex-col w-full items-center my-12">
           <div class="flex">
-            <Blank char="W" :filled="false" class="mx-1" />
-            <Blank char="E" :filled="true" class="mx-1" />
-            <Blank char="B" :filled="true" class="mx-1" />
+            <Blank char="W" :filled="keyState('W')" class="mx-1" />
+            <Blank char="E" :filled="keyState('E')" class="mx-1" />
+            <Blank char="B" :filled="keyState('B')" class="mx-1" />
             <div id="spacer" class="w-6"></div>
-            <Blank char="D" :filled="true" class="mx-1" />
-            <Blank char="E" :filled="true" class="mx-1" />
-            <Blank char="V" :filled="true" class="mx-1" />
-            <Blank char="E" :filled="true" class="mx-1" />
-            <Blank char="L" :filled="true" class="mx-1" />
-            <Blank char="O" :filled="true" class="mx-1" />
-            <Blank char="P" :filled="true" class="mx-1" />
-            <Blank char="E" :filled="true" class="mx-1" />
-            <Blank char="R" :filled="true" class="mx-1" />
+            <Blank char="D" :filled="keyState('D')" class="mx-1" />
+            <Blank char="E" :filled="keyState('E')" class="mx-1" />
+            <Blank char="V" :filled="keyState('V')" class="mx-1" />
+            <Blank char="E" :filled="keyState('E')" class="mx-1" />
+            <Blank char="L" :filled="keyState('L')" class="mx-1" />
+            <Blank char="O" :filled="keyState('O')" class="mx-1" />
+            <Blank char="P" :filled="keyState('P')" class="mx-1" />
+            <Blank char="E" :filled="keyState('E')" class="mx-1" />
+            <Blank char="R" :filled="keyState('R')" class="mx-1" />
+          </div>
+          <!-- <Keyboard keyPressed="keyboard_pressed" /> -->
+          <div class="flex mt-12">
+            <Key @click="keyPressed('Q')" char="Q" :disabled="keyState('Q')" />
+            <Key @click="keyPressed('W')" char="W" :disabled="keyState('W')" />
+            <Key @click="keyPressed('E')" char="E" :disabled="keyState('E')" />
+            <Key @click="keyPressed('R')" char="R" :disabled="keyState('R')" />
+            <Key @click="keyPressed('T')" char="T" :disabled="keyState('T')" />
+            <Key @click="keyPressed('Y')" char="Y" :disabled="keyState('Y')" />
+            <Key @click="keyPressed('U')" char="U" :disabled="keyState('U')" />
+            <Key @click="keyPressed('I')" char="I" :disabled="keyState('I')" />
+            <Key @click="keyPressed('O')" char="O" :disabled="keyState('O')" />
+            <Key @click="keyPressed('P')" char="P" :disabled="keyState('P')" />
           </div>
           <div class="flex">
-            <!-- <Keyboard keyPressed="keyboard_pressed" /> -->
+            <Key @click="keyPressed('A')" char="A" :disabled="keyState('A')" />
+            <Key @click="keyPressed('S')" char="S" :disabled="keyState('S')" />
+            <Key @click="keyPressed('D')" char="D" :disabled="keyState('D')" />
+            <Key @click="keyPressed('F')" char="F" :disabled="keyState('F')" />
+            <Key @click="keyPressed('G')" char="G" :disabled="keyState('G')" />
+            <Key @click="keyPressed('H')" char="H" :disabled="keyState('H')" />
+            <Key @click="keyPressed('J')" char="J" :disabled="keyState('J')" />
+            <Key @click="keyPressed('K')" char="K" :disabled="keyState('K')" />
+            <Key @click="keyPressed('L')" char="L" :disabled="keyState('L')" />
+          </div>
+          <div class="flex">
+            <Key @click="keyPressed('Z')" char="Z" :disabled="keyState('Z')" />
+            <Key @click="keyPressed('X')" char="X" :disabled="keyState('X')" />
+            <Key @click="keyPressed('C')" char="C" :disabled="keyState('C')" />
+            <Key @click="keyPressed('V')" char="V" :disabled="keyState('V')" />
+            <Key @click="keyPressed('B')" char="B" :disabled="keyState('B')" />
+            <Key @click="keyPressed('N')" char="N" :disabled="keyState('N')" />
+            <Key @click="keyPressed('M')" char="M" :disabled="keyState('M')" />
           </div>
         </div>
       </div>
