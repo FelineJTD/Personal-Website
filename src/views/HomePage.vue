@@ -1,9 +1,29 @@
-<script setup lang="ts">
+<script lang="ts">
+export default {
+  name: 'HomePage',
+  data() {
+    return {
+      keyboard_pressed: '',
+    };
+  },
+  components: {
+    'Key': Key,
+    'Blank': Blank,
+  },
+}
 import { ref } from 'vue'
+// import Keyboard from '../components/Keyboard.vue'
+import Key from '../components/Key.vue'
+import Blank from '../components/Blank.vue'
+// import Key1 from '../components/Key.vue';
 
 // defineProps<{ msg: string }>()
 
-const count = ref(0)
+// const count = ref(0)
+let keyboard_pressed = new Map<string, boolean>([
+  ["A", false],
+  ["E", false]
+]);
 </script>
 
 <template>
@@ -27,13 +47,25 @@ const count = ref(0)
         <h3 class="font-black">My <span class="text-coral-t">profession</span>?</h3>
         <h4>Why don't you guess it?</h4>
         <!-- hangman -->
-        <div class="text-center my-12">
-          <h4 class="mb-12 font-bold">_ _ _ &nbsp; _ _ _ _ _ _ _ _ _</h4>
-          <p class="text-2xl">
-            Q W E R T Y U I O P <br />
-            A S D F G H J K L <br />
-            Z X C V B N M <br />
-          </p>
+        <div class="flex flex-col w-full items-center my-12">
+          <div class="flex">
+            <Blank char="W" :filled="false" class="mx-1" />
+            <Blank char="E" :filled="true" class="mx-1" />
+            <Blank char="B" :filled="true" class="mx-1" />
+            <div id="spacer" class="w-6"></div>
+            <Blank char="D" :filled="true" class="mx-1" />
+            <Blank char="E" :filled="true" class="mx-1" />
+            <Blank char="V" :filled="true" class="mx-1" />
+            <Blank char="E" :filled="true" class="mx-1" />
+            <Blank char="L" :filled="true" class="mx-1" />
+            <Blank char="O" :filled="true" class="mx-1" />
+            <Blank char="P" :filled="true" class="mx-1" />
+            <Blank char="E" :filled="true" class="mx-1" />
+            <Blank char="R" :filled="true" class="mx-1" />
+          </div>
+          <div class="flex">
+            <!-- <Keyboard keyPressed="keyboard_pressed" /> -->
+          </div>
         </div>
       </div>
     </section>
