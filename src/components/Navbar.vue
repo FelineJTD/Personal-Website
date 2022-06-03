@@ -3,7 +3,7 @@
   import Portfolio from "../assets/Portfolio.svg"
   import About from "../assets/About.svg"
 
-defineProps<{ homeColor: string }>()
+// defineProps<{ homeColor: string }>()
 
 // const count = ref(0)
 </script>
