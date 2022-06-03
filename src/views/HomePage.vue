@@ -61,9 +61,10 @@ import Blank from '../components/Blank.vue'
         <!-- image -->
         
         <div class="bg-coral-500 relative h-96 lg:h-[75vh] w-96 lg:w-[75vh] -p-12 overflow-hidden">
-          <img src="../assets/homepage/bottom.png" class="absolute" :style="{ transform: `translate(${x*20}px, ${y*20}px)` }" />
-          <img src="../assets/homepage/mid.png" class="absolute" :style="{ transform: `translate(${x*35}px, ${y*35}px)` }" />
-          <img src="../assets/homepage/top.png" class="absolute"  />
+          <img src="../assets/homepage/bottom.png" class="absolute" :style="{ transform: `translate(${x*20}px, ${y*10}px)` }" />
+          <img src="../assets/homepage/mid.png" class="absolute" :style="{ transform: `translate(${x*35}px, ${y*15}px)` }" />
+          <img src="../assets/homepage/top.png" class="absolute" :style="{ transform: `translate(${x*50}px, ${y*15}px)` }" />
+          <img src="../assets/homepage/cover.svg" class="absolute" />
           <img src="../assets/homepage/circles.png" class="absolute" :style="{ transform: `translate(${x*75}px, ${y*75}px)` }" />
           <img src="../assets/texture.png" class="absolute w-full h-full mix-blend-overlay" />
         </div>
