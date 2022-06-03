@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 export default {
   name: 'Keyboard',
   data() {
@@ -22,4 +22,4 @@ defineProps<{
     <button class="hover:text-coral-t hover:-rotate-12 duration-200"><h4>{{ char }}</h4></button>
   </div>
 
-</template>
+</template> -->

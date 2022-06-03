@@ -11,7 +11,7 @@ const routes = {
   '/about': About
 }
 
-let currentPath = window.location.pathname;
+// let currentPath = window.location.pathname;
 
 export default {
   data() {
@@ -24,17 +24,16 @@ export default {
   },
   computed: {
     currentView() : any {
-      return routes[currentPath] || NotFound
+      //@ts-ignore
+      return (routes[this.currentPath] || NotFound);
     }
   },
   mounted() {
     window.addEventListener('hashchange', () => {
-      currentPath = window.location.pathname
-      console.log(currentPath);
+      this.currentPath = window.location.pathname
     })
   }
 }
-console.log(currentPath);
 </script>
 
 <template>
