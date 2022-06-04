@@ -5,6 +5,7 @@ export default {
     return {
       keyboard_pressed: new Map<string, boolean>(),
       win: ['W', 'E', 'B', 'D', 'V', 'L', 'O', 'P', 'R'],
+      cont: false,
       x: 0,
       y: 0,
     };
@@ -19,7 +20,7 @@ export default {
       }
       // check win
       if (this.win.length === 0) {
-        alert('You win!');
+        this.cont = true;
       }
     },
     keyState(char: string) {
@@ -29,6 +30,9 @@ export default {
       this.x = (e.clientX-window.innerWidth/2)/window.innerWidth;
       this.y = (e.clientY-window.innerHeight/2)/window.innerHeight;
       console.log(this.x, this.y);
+    },
+    scrollWindow() {
+      window.scrollTo(0, window.innerHeight);
     }
   },
   components: {
@@ -137,11 +141,18 @@ import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
         </div>
       </div>
     </section>
+    <!-- cont. -->
+    <div class="flex w-full justify-center">
+      <button class="flex flex-col items-center animate-bounce absolute hover:font-bold hover:text-coral-t duration-200" v-if="cont" @click="scrollWindow">
+        <p class="animate-fadeIn mb-1 font-semibold">continue</p>
+        <img src="../assets/homepage/arrow-down.svg" class="w-4 h-4 animate-fadeIn" />
+      </button>
+    </div>
 
     <!--- SECTION II -->
     <section class="h-screen w-full bg-[url('./assets/homepage/section2.svg')] bg-no-repeat bg-cover pt-48 px-[8%]">
-      <ImAWebDeveloper class="h-[3rem] mb-12" />
-      <!-- <img src="../assets/homepage/im_a_web_developer.svg" alt="I'm a web developer." class="h-[3rem] mb-12" /> -->
+      <!-- <ImAWebDeveloper class="h-[3rem] mb-12" /> -->
+      <img src="../assets/homepage/im_a_web_developer.svg" alt="I'm a web developer." class="h-[3rem] my-12" />
       <p class="text-left">
         I love art and coding. I specialise in frontend development, but I am currently expanding my knowledge of backend development. <br /><br />
         Let me show you some of the websites I&apos;ve made.
@@ -157,6 +168,7 @@ import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
 <style>
 html,
 body {
+  scroll-behavior: smooth;
   scrollbar-color: #1D3935 #C2685B;
   scrollbar-width: thin;
 }
