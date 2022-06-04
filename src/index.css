@@ -7,12 +7,17 @@
   src: url("./assets/fonts/quicksand/Quicksand-VariableFont_wght.ttf");
 }
 
+@font-face {
+  font-family: "Bohemian Soul";
+  src: url("assets/fonts/bohemian-soul/BohemianSoul-Regular.otf");
+}
+
 h1 {
-  font-family: "Quicksand";
-  font-weight: 700;
-  font-size: 2.5rem;
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
+  font-family: "Bohemian Soul";
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 0rem;
 }
 
 h2 {

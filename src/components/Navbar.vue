@@ -9,10 +9,10 @@
 </script>
 
 <template>
-  <div class="bg-white h-12 flex justify-around items-center px-36 py-0.5 shadow-lg fixed w-full z-50">
-    <a href='/'>Home</a>
-    <a href='/portfolio'>Portfolio</a>
-    <a href="/about">About</a>
+  <div class="bg-white h-12 flex justify-around items-center px-36 py-0.5 shadow-lg fixed w-full z-50 text-[#44312E]">
+    <a href='/'><h1 class="hover:text-coral-t duration-200">Home</h1></a>
+    <a href='/portfolio'><h1 class="hover:text-coral-t duration-200">Portfolio</h1></a>
+    <a href="/about"><h1 class="hover:text-coral-t duration-200">About</h1></a>
   </div>
   <!-- <h1 class="text-white">{{ msg }}</h1> -->
 

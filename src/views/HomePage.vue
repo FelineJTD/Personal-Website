@@ -153,7 +153,7 @@ import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
     <section class="h-screen w-full bg-[url('./assets/homepage/section2.svg')] bg-no-repeat bg-cover pt-48 px-[8%]">
       <!-- <ImAWebDeveloper class="h-[3rem] mb-12" /> -->
       <img src="../assets/homepage/im_a_web_developer.svg" alt="I'm a web developer." class="h-[3rem] my-12" />
-      <p class="text-left">
+      <p class="text-left mb-12">
         I love art and coding. I specialise in frontend development, but I am currently expanding my knowledge of backend development. <br /><br />
         Let me show you some of the websites I&apos;ve made.
       </p>
