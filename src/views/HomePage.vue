@@ -40,7 +40,7 @@ export default {
 // import Keyboard from '../components/Keyboard.vue'
 import Key from '../components/Key.vue'
 import Blank from '../components/Blank.vue'
-import HiImFeli from '../assets/homepage/hi_im_feli.svg'
+const HiImFeli = '../assets/homepage/hi_im_feli.svg'
 import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
 // import Key1 from '../components/Key.vue';
 
@@ -54,7 +54,7 @@ import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
 </script>
 
 <template>
-  <div class="bg-coral-100 bg-[url('./assets/texture.png')] bg-blend-overlay bg-repeat min-h-screen text-teal-t pt-12">
+  <div class="bg-coral-100 bg-[url('./assets/texture-25.png')] bg-blend-overlay bg-repeat min-h-screen text-teal-t pt-12">
 
     <!--- SECTION I -->
     <section class="flex flex-col lg:flex-row min-h-[90vh] w-full items-center justify-center -ml-12 -mb-24" @mousemove="onMousemove">
@@ -62,19 +62,26 @@ import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
       <div class="mr-6">
         <!-- image -->
         
+        <!-- <div class="bg-coral-500 relative h-96 lg:h-[75vh] w-96 lg:w-[75vh] -p-12 overflow-hidden">
+          <img src="../assets/homepage/bottom.png" class="absolute" :style="{ transform: `translate(${-x*20}px, ${-y*10}px)` }" />
+          <img src="../assets/homepage/mid.svg" class="absolute" :style="{ transform: `translate(${-x*35}px, ${-y*15}px)` }" />
+          <img src="../assets/homepage/top.svg" class="absolute" :style="{ transform: `translate(${-x*50}px, ${-y*15}px)` }" />
+          <img src="../assets/homepage/cover.svg" class="absolute" />
+          <img src="../assets/homepage/circles.svg" class="absolute" :style="{ transform: `translate(${-x*75}px, ${-y*30}px)` }" />
+          <img src="../assets/texture.png" class="absolute w-full h-full mix-blend-overlay opacity-25" />
+        </div> -->
         <div class="bg-coral-500 relative h-96 lg:h-[75vh] w-96 lg:w-[75vh] -p-12 overflow-hidden">
-          <img src="../assets/homepage/bottom.png" class="absolute" :style="{ transform: `translate(${x*20}px, ${y*10}px)` }" />
-          <img src="../assets/homepage/mid.png" class="absolute" :style="{ transform: `translate(${x*35}px, ${y*15}px)` }" />
-          <img src="../assets/homepage/top.png" class="absolute" :style="{ transform: `translate(${x*50}px, ${y*15}px)` }" />
-          <img src="../assets/homepage/cover.png" class="absolute" />
-          <img src="../assets/homepage/circles.png" class="absolute" :style="{ transform: `translate(${x*75}px, ${y*75}px)` }" />
-          <img src="../assets/texture.png" class="absolute w-full h-full mix-blend-overlay" />
+          <img src="../assets/homepage/bottom.png" class="absolute" :style="{ transform: `translate(${-x*75}px, ${-y*30}px)` }" />
+          <img src="../assets/homepage/mid.svg" class="absolute" :style="{ transform: `translate(${-x*50}px, ${-y*17}px)` }" />
+          <img src="../assets/homepage/top.svg" class="absolute" :style="{ transform: `translate(${-x*35}px, ${-y*15}px)` }" />
+          <img src="../assets/homepage/cover.svg" class="absolute" />
+          <img src="../assets/homepage/circles.svg" class="absolute" :style="{ transform: `translate(${-x*20}px, ${-y*10}px)` }" />
+          <img src="../assets/texture.png" class="absolute w-full h-full mix-blend-overlay opacity-25" />
         </div>
       </div>
       <!-- right -->
       <div class="text-left">
-        <HiImFeli class="h-[4.5rem] -translate-x-3 mb-12" />
-        <!-- <img src="../assets/homepage/hi_im_feli.svg" alt="Hi, I'm Feli" class="h-[4.5rem] -translate-x-3 mb-12" /> -->
+        <img src="../assets/homepage/hi_im_feli.svg" alt="Hi, I'm Feli" class="h-[4.5rem] -translate-x-3 mb-12" />
         <h3 class="font-black">My <span class="text-coral-t">profession</span>?</h3>
         <h4>Why don't you guess it?</h4>
         <!-- hangman -->

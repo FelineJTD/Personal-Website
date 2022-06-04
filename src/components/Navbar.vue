@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import Home from "../assets/Home.svg"
-  import Portfolio from "../assets/Portfolio.svg"
-  import About from "../assets/About.svg"
+  // import Home from "../assets/Home.svg"
+  // import Portfolio from "../assets/Portfolio.svg"
+  // import About from "../assets/About.svg"
 
 // defineProps<{ homeColor: string }>()
 
@@ -10,9 +10,9 @@
 
 <template>
   <div class="bg-white h-12 flex justify-around items-center px-36 py-0.5 shadow-lg fixed w-full z-50">
-    <a href='/'><Home class="hover:fill-coral-t" /></a>
-    <a href='/portfolio'><Portfolio class="hover:fill-coral-t" /></a>
-    <a href="/about"><About class="hover:fill-coral-t" /></a>
+    <a href='/'>Home</a>
+    <a href='/portfolio'>Portfolio</a>
+    <a href="/about">About</a>
   </div>
   <!-- <h1 class="text-white">{{ msg }}</h1> -->
 
