@@ -152,7 +152,7 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
     </div>
 
     <!--- SECTION II -->
-    <section id="introduction" class="min-h-screen w-full bg-[url('./assets/homepage/sec2.svg')] bg-no-repeat bg-cover pt-48 pb-12 px-[8%]">
+    <section id="introduction" class="min-h-screen w-full bg-[url('./assets/homepage/sec2.svg')] bg-no-repeat bg-cover pt-48 pb-12 pl-[8%] pr-[5%]">
       <!-- <ImAWebDeveloper class="h-[3rem] mb-12" /> -->
       <img src="../assets/homepage/im_a_web_developer.svg" alt="I'm a web developer." class="h-[3rem] my-12" />
       <p class="text-left mb-12">
@@ -164,25 +164,25 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
           title="Wispril ITB 2022"
           desc="A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more."
           link="https://paradewisudaitb.com"
-          image="./src/assets/homepage/portfolio-thumbnail/wispril.png" 
-          video="./src/assets/homepage/portfolio-thumbnail/wispril.mp4"
+          image="./assets/homepage/portfolio-thumbnail/wispril.png" 
+          video="./assets/homepage/portfolio-thumbnail/wispril.mp4"
         />
         <PortfolioThumbnail 
           title="Joyume"
           desc="Joyume offers kids a unique experience of customising and personalising their own toys, called 'Joyu Friends', which will be specifically created and delivered upon order."
           link="https://joyume.netlify.app"
-          image="./src/assets/homepage/portfolio-thumbnail/joyume.png" 
-          video="./src/assets/homepage/portfolio-thumbnail/joyume.mp4"
+          image="./assets/homepage/portfolio-thumbnail/joyume.png" 
+          video="./assets/homepage/portfolio-thumbnail/joyume.mp4"
         />
         <PortfolioThumbnail 
           title="Mealth"
           desc="Mealth is a safe, comfortable, and supportive space seeking to help and raise awareness about eating disorders in Indonesia through social media, events, and programs."
           link="https://mealth.netlify.app"
-          image="./src/assets/homepage/portfolio-thumbnail/mealth.png" 
-          video="./src/assets/homepage/portfolio-thumbnail/mealth.mp4"
+          image="./assets/homepage/portfolio-thumbnail/mealth.png" 
+          video="./assets/homepage/portfolio-thumbnail/mealth.mp4"
         />
-        <div class="h-full flex flex-col justify-center absolute right-0 p-3 bg-gradient-to-r from-transparent to-white">
-          <a href="/portfolio" class="flex flex-row items-center animate-pulse hover:animate-none">
+        <div class="h-full flex flex-col justify-center absolute right-0 pr-3 pl-12 bg-gradient-to-r from-[rgba(256,256,256,0)] to-[rgba(256,256,256,0.5)] hover:to-coral-t rounded-3xl animate-pulse hover:animate-none duration-500">
+          <a href="/portfolio" class="flex flex-row items-center ">
             <h2 class="text-center vertical-rl rotate-180">more</h2>
             <img src="../assets/homepage/right-arrow.svg" class="w-6 h-6 ml-2" />
           </a>
