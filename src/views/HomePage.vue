@@ -170,27 +170,27 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
         Let me show you some of the websites I&apos;ve made.
       </p>
       <!-- <div class="overflow-hidden"> -->
-        <div id="portfolio" class="flex flex-row overflow-x-scroll pb-10">
+        <div id="portfolio" class="flex flex-row overflow-x-scroll">
           <PortfolioThumbnail 
             title="Wispril ITB 2022"
             desc="A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more."
             link="https://paradewisudaitb.com"
-            image="./src/assets/homepage/portfolio-thumbnail/wispril.png" 
-            video="./src/assets/homepage/portfolio-thumbnail/wispril.mp4"
+            image="../assets/homepage/portfolio-thumbnail/wispril.png" 
+            video="../assets/homepage/portfolio-thumbnail/wispril.mp4"
           />
           <PortfolioThumbnail 
             title="Joyume"
             desc="Joyume offers kids a unique experience of customising and personalising their own toys, called 'Joyu Friends', which will be specifically created and delivered upon order."
             link="https://joyume.netlify.app"
-            image="./src/assets/homepage/portfolio-thumbnail/joyume.png" 
-            video="./src/assets/homepage/portfolio-thumbnail/joyume.mp4"
+            image="../assets/homepage/portfolio-thumbnail/joyume.png" 
+            video="../assets/homepage/portfolio-thumbnail/joyume.mp4"
           />
           <PortfolioThumbnail 
             title="Mealth"
             desc="Mealth is a safe, comfortable, and supportive space seeking to help and raise awareness about eating disorders in Indonesia through social media, events, and programs."
             link="https://mealth.netlify.app"
-            image="./src/assets/homepage/portfolio-thumbnail/mealth.png" 
-            video="./src/assets/homepage/portfolio-thumbnail/mealth.mp4"
+            image="../assets/homepage/portfolio-thumbnail/mealth.png" 
+            video="../assets/homepage/portfolio-thumbnail/mealth.mp4"
           />
           <!-- <div class="h-full flex flex-col justify-center absolute right-0 pr-3 pl-12 bg-gradient-to-r from-[rgba(256,256,256,0)] to-[rgba(256,256,256,0.5)] hover:to-coral-t rounded-3xl animate-pulse hover:animate-none duration-500"> -->
           <div class="flex flex-col justify-center">
