@@ -6,7 +6,6 @@ export default defineComponent({
   data() {
     return {
       play: false,
-      test: false
     };
   },
   props: {
@@ -24,9 +23,6 @@ export default defineComponent({
       this.play = false;
     },
   },
-  mounted() {
-    this.test = true;
-  },
 });
 
 defineProps<{ 
@@ -40,7 +36,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="rounded-xl bg-coral-500 bg-[url('./assets/texture-25.png')] bg-blend-overlay relative mr-12 min-w-[30vw] text-center p-[2%] shadow-xl text-white hidden" :class="{'animate-fadeIn visible':test}" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
+  <div class="rounded-xl bg-coral-500 bg-[url('./assets/texture-25.png')] bg-blend-overlay relative mr-12 min-w-[30vw] text-center p-[2%] shadow-xl text-white" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
     <div class="relative shadow-xl">
       <!-- <img :src="image" class="rounded-xl" /> -->
       <img :src="image" class="rounded-xl" />
