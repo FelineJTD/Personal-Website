@@ -4,6 +4,7 @@ import Portfolio from './views/Portfolio.vue'
 import About from './views/About.vue'
 import NotFound from './views/NotFound.vue'
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 
 const routes = {
   '/': HomePage,
@@ -18,7 +19,8 @@ export default {
     }
   },
   components: {
-    Navbar
+    Navbar,
+    Footer
   },
   computed: {
     currentView() : any {
@@ -35,10 +37,15 @@ export default {
 </script>
 
 <template>
-  <Navbar />
+  <nav>
+    <Navbar />
+  </nav>
   <main>
     <component :is="currentView" />
   </main>
+  <footer>
+    <Footer />
+  </footer>
 </template>
 
 <style>
