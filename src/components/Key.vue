@@ -1,7 +1,7 @@
 <!-- A keyboard key -->
 
 <script setup lang="ts">
-
+import {} from 'vue';
 defineProps<{ 
   char: string, 
   disabled: boolean,

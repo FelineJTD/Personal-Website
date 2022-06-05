@@ -1,0 +1,49 @@
+<script lang="ts">
+import { defineProps, defineComponent } from "vue";
+
+export default defineComponent({
+  name: 'PortfolioThumbnail',
+  data() {
+    return {
+      play: false,
+    };
+  },
+  props: {
+    title: String,
+    desc: String,
+    link: String,
+    image: String,
+    video: String,
+  },
+  methods: {
+    onMouseEnter() {
+      this.play = true;
+    },
+    onMouseLeave() {
+      this.play = false;
+    },
+  },
+});
+
+defineProps<{ 
+  title: string,
+  desc: string,
+  link: string,
+  image: string,
+  video: string,
+}>()
+
+</script>
+
+<template>
+  <div class="rounded-xl bg-coral-500 bg-[url('./assets/texture-25.png')] bg-blend-overlay relative mr-12 w-[30rem] text-center p-[2%] shadow-xl text-white" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
+    <div class="relative shadow-xl">
+      <!-- <img :src="image" class="rounded-xl" /> -->
+      <img :src="image" class="rounded-xl" />
+      <video :src="video" v-if="play" class="absolute rounded-xl bottom-0" autoplay loop muted />
+    </div>
+    <h1 class="mt-6">{{ title }}</h1>
+    <a :href="link" target="_blank" class="text-teal-t underline"><p class="font-bold">{{ link }}</p></a>
+    <p class="mt-6">{{ desc }}</p>
+  </div>
+</template>

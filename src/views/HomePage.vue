@@ -36,14 +36,16 @@ export default {
   components: {
     'Key': Key,
     'Blank': Blank,
+    'PortfolioThumbnail': PortfolioThumbnail,
   },
 }
 // import { ref } from 'vue'
 // import Keyboard from '../components/Keyboard.vue'
 import Key from '../components/Key.vue'
 import Blank from '../components/Blank.vue'
-const HiImFeli = '../assets/homepage/hi_im_feli.svg'
-import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
+import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
+// const HiImFeli = '../assets/homepage/hi_im_feli.svg'
+// import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
 // import Key1 from '../components/Key.vue';
 
 // defineProps<{ msg: string }>()
@@ -56,7 +58,7 @@ import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
 </script>
 
 <template>
-  <div class="bg-coral-100 bg-[url('./assets/texture-25.png')] bg-blend-overlay bg-repeat min-h-screen text-teal-t pt-12">
+  <div class="bg-coral-100 bg-[url('./assets/texture-25.png')] bg-blend-overlay bg-repeat min-h-screen text-teal-t pt-12 overflow-x-hidden">
 
     <!--- SECTION I -->
     <section class="flex flex-col lg:flex-row min-h-[90vh] w-full items-center justify-center -ml-12 -mb-24" @mousemove="onMousemove">
@@ -150,16 +152,48 @@ import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
     </div>
 
     <!--- SECTION II -->
-    <section id="introduction" class="h-screen w-full bg-[url('./assets/homepage/section2.svg')] bg-no-repeat bg-cover pt-48 px-[8%]">
+    <section id="introduction" class="min-h-screen w-full bg-[url('./assets/homepage/sec2.svg')] bg-no-repeat bg-cover pt-48 pb-12 px-[8%]">
       <!-- <ImAWebDeveloper class="h-[3rem] mb-12" /> -->
       <img src="../assets/homepage/im_a_web_developer.svg" alt="I'm a web developer." class="h-[3rem] my-12" />
       <p class="text-left mb-12">
         I love art and coding. I specialise in frontend development, but I am currently expanding my knowledge of backend development. <br /><br />
         Let me show you some of the websites I&apos;ve made.
       </p>
-      <div class="h-48 w-36 bg-coral-500 rounded-3xl">
-        smth
+      <div id="portfolio" class="flex flex-row overflow-x-scroll relative">
+        <PortfolioThumbnail 
+          title="Wispril ITB 2022"
+          desc="A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more."
+          link="https://paradewisudaitb.com"
+          image="./src/assets/homepage/portfolio-thumbnail/wispril.png" 
+          video="./src/assets/homepage/portfolio-thumbnail/wispril.mp4"
+        />
+        <PortfolioThumbnail 
+          title="Joyume"
+          desc="Joyume offers kids a unique experience of customising and personalising their own toys, called 'Joyu Friends', which will be specifically created and delivered upon order."
+          link="https://joyume.netlify.app"
+          image="./src/assets/homepage/portfolio-thumbnail/joyume.png" 
+          video="./src/assets/homepage/portfolio-thumbnail/joyume.mp4"
+        />
+        <PortfolioThumbnail 
+          title="Mealth"
+          desc="Mealth is a safe, comfortable, and supportive space seeking to help and raise awareness about eating disorders in Indonesia through social media, events, and programs."
+          link="https://mealth.netlify.app"
+          image="./src/assets/homepage/portfolio-thumbnail/mealth.png" 
+          video="./src/assets/homepage/portfolio-thumbnail/mealth.mp4"
+        />
+        <div class="h-full flex flex-col justify-center absolute right-0 p-3 bg-gradient-to-r from-transparent to-white">
+          <a href="/portfolio" class="flex flex-row items-center animate-pulse hover:animate-none">
+            <h2 class="text-center vertical-rl rotate-180">more</h2>
+            <img src="../assets/homepage/right-arrow.svg" class="w-6 h-6 ml-2" />
+          </a>
+        </div>
       </div>
+      <p class="text-left my-12">
+        By the way, this <span class="text-white">website</span> is designed, illustrated, and coded entirely by me ;)
+      </p>
+      <!-- <div class="h-48 w-36 bg-coral-500 rounded-3xl">
+        smth
+      </div> -->
     </section>
 
   </div>
@@ -185,4 +219,19 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #1D3935;
 }
+
+#portfolio {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  overflow: -moz-scrollbars-none; /* Firefox */
+}
+
+#portfolio::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
+
 </style>
