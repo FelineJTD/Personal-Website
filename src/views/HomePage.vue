@@ -32,6 +32,16 @@ export default {
       this.x = (e.clientX-window.innerWidth/2)/window.innerWidth;
       this.y = (e.clientY-window.innerHeight/2)/window.innerHeight;
     },
+    scrollLeft() {
+      let scrollAmount = 0;
+      var interval = setInterval(() => {
+        document.getElementById('portfolio').scrollLeft += 0.5;
+        scrollAmount += 1;
+        if (scrollAmount >= window.innerWidth) {
+          clearInterval(interval);
+        }
+      }, 0.1);
+    },
   },
   components: {
     'Key': Key,
@@ -78,7 +88,7 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
           <img src="../assets/homepage/bottom.png" class="absolute" :style="{ transform: `translate(${-x*75}px, ${-y*30}px)` }" />
           <img src="../assets/homepage/mid.svg" class="absolute" :style="{ transform: `translate(${-x*50}px, ${-y*17}px)` }" />
           <img src="../assets/homepage/top.svg" class="absolute" :style="{ transform: `translate(${-x*35}px, ${-y*15}px)` }" />
-          <img src="../assets/homepage/cover.svg" class="absolute" />
+          <img src="../assets/homepage/cover.svg" class="absolute object-cover" />
           <img src="../assets/homepage/circles.svg" class="absolute" :style="{ transform: `translate(${-x*20}px, ${-y*10}px)` }" />
           <img src="../assets/texture.png" class="absolute w-full h-full mix-blend-overlay opacity-25" />
         </div>
@@ -159,37 +169,42 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
         I love art and coding. I specialise in frontend development, but I am currently expanding my knowledge of backend development. <br /><br />
         Let me show you some of the websites I&apos;ve made.
       </p>
-      <div id="portfolio" class="flex flex-row overflow-x-scroll relative">
-        <PortfolioThumbnail 
-          title="Wispril ITB 2022"
-          desc="A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more."
-          link="https://paradewisudaitb.com"
-          image="./assets/homepage/portfolio-thumbnail/wispril.png" 
-          video="./assets/homepage/portfolio-thumbnail/wispril.mp4"
-        />
-        <PortfolioThumbnail 
-          title="Joyume"
-          desc="Joyume offers kids a unique experience of customising and personalising their own toys, called 'Joyu Friends', which will be specifically created and delivered upon order."
-          link="https://joyume.netlify.app"
-          image="./assets/homepage/portfolio-thumbnail/joyume.png" 
-          video="./assets/homepage/portfolio-thumbnail/joyume.mp4"
-        />
-        <PortfolioThumbnail 
-          title="Mealth"
-          desc="Mealth is a safe, comfortable, and supportive space seeking to help and raise awareness about eating disorders in Indonesia through social media, events, and programs."
-          link="https://mealth.netlify.app"
-          image="./assets/homepage/portfolio-thumbnail/mealth.png" 
-          video="./assets/homepage/portfolio-thumbnail/mealth.mp4"
-        />
-        <div class="h-full flex flex-col justify-center absolute right-0 pr-3 pl-12 bg-gradient-to-r from-[rgba(256,256,256,0)] to-[rgba(256,256,256,0.5)] hover:to-coral-t rounded-3xl animate-pulse hover:animate-none duration-500">
-          <a href="/portfolio" class="flex flex-row items-center ">
-            <h2 class="text-center vertical-rl rotate-180">more</h2>
-            <img src="../assets/homepage/right-arrow.svg" class="w-6 h-6 ml-2" />
-          </a>
-        </div>
+      <!-- <div class="overflow-hidden"> -->
+        <div id="portfolio" class="flex flex-row overflow-x-scroll pb-10">
+          <PortfolioThumbnail 
+            title="Wispril ITB 2022"
+            desc="A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more."
+            link="https://paradewisudaitb.com"
+            image="./src/assets/homepage/portfolio-thumbnail/wispril.png" 
+            video="./src/assets/homepage/portfolio-thumbnail/wispril.mp4"
+          />
+          <PortfolioThumbnail 
+            title="Joyume"
+            desc="Joyume offers kids a unique experience of customising and personalising their own toys, called 'Joyu Friends', which will be specifically created and delivered upon order."
+            link="https://joyume.netlify.app"
+            image="./src/assets/homepage/portfolio-thumbnail/joyume.png" 
+            video="./src/assets/homepage/portfolio-thumbnail/joyume.mp4"
+          />
+          <PortfolioThumbnail 
+            title="Mealth"
+            desc="Mealth is a safe, comfortable, and supportive space seeking to help and raise awareness about eating disorders in Indonesia through social media, events, and programs."
+            link="https://mealth.netlify.app"
+            image="./src/assets/homepage/portfolio-thumbnail/mealth.png" 
+            video="./src/assets/homepage/portfolio-thumbnail/mealth.mp4"
+          />
+          <!-- <div class="h-full flex flex-col justify-center absolute right-0 pr-3 pl-12 bg-gradient-to-r from-[rgba(256,256,256,0)] to-[rgba(256,256,256,0.5)] hover:to-coral-t rounded-3xl animate-pulse hover:animate-none duration-500"> -->
+          <div class="flex flex-col justify-center">
+            <a href="/portfolio" class="flex flex-row items-center animate-pulse hover:animate-none">
+              <h2 class="text-center vertical-rl rotate-180">more</h2>
+              <img src="../assets/homepage/right-arrow.svg" class="w-6 h-6 ml-2" />
+            </a>
+          </div>
+          <!-- </div> -->
+        <!-- </div> -->
       </div>
+
       <p class="text-left my-12">
-        By the way, this <span class="text-white">website</span> is designed, illustrated, and coded entirely by me ;)
+        By the way, <span class="text-white">this website</span> is designed, illustrated, and coded entirely by me ;)
       </p>
       <!-- <div class="h-48 w-36 bg-coral-500 rounded-3xl">
         smth
@@ -221,13 +236,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 #portfolio {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-  overflow: -moz-scrollbars-none; /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
 }
 
 #portfolio::-webkit-scrollbar {
-  display: none;  /* Safari and Chrome */
+  display: none;
 }
 
 .vertical-rl {

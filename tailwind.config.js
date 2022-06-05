@@ -53,11 +53,16 @@ module.exports = {
         fadeIn: {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 }
+        },
+        scrollLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-25vh) '}
         }
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
-        fadeIn: 'fadeIn 1s ease-in'
+        fadeIn: 'fadeIn 1s ease-in',
+        scrollLeft: 'scrollLeft 10s linear',
       }
     },
   },
