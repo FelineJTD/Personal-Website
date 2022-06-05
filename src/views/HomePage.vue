@@ -32,16 +32,16 @@ export default {
       this.x = (e.clientX-window.innerWidth/2)/window.innerWidth;
       this.y = (e.clientY-window.innerHeight/2)/window.innerHeight;
     },
-    scrollLeft() {
-      let scrollAmount = 0;
-      var interval = setInterval(() => {
-        document.getElementById('portfolio').scrollLeft += 0.5;
-        scrollAmount += 1;
-        if (scrollAmount >= window.innerWidth) {
-          clearInterval(interval);
-        }
-      }, 0.1);
-    },
+    // scrollLeft() {
+    //   let scrollAmount = 0;
+    //   var interval = setInterval(() => {
+    //     document.getElementById('portfolio').scrollLeft += 0.5;
+    //     scrollAmount += 1;
+    //     if (scrollAmount >= window.innerWidth) {
+    //       clearInterval(interval);
+    //     }
+    //   }, 0.1);
+    // },
   },
   components: {
     'Key': Key,
