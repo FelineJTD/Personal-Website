@@ -4,14 +4,15 @@
 
 defineProps<{ 
   char: string, 
-  filled: boolean
+  filled: boolean,
+  fin: boolean
 }>()
 
 </script>
 
 <template>
   <div class="text-center relative px-1">
-    <h4 v-if="filled" class="absolute font-bold">{{ char }}</h4>
-    <h3 class="font-bold">_</h3>
+    <h4 v-if="filled" class="absolute font-bold duration-500" :class="{ 'text-coral-t': fin }">{{ char }}</h4>
+    <h3 class="font-bold" :class="{ invisible: fin }">_</h3>
   </div>
 </template>

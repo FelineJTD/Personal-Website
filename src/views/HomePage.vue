@@ -12,28 +12,26 @@ export default {
   },
   methods: {
     keyPressed(char: string) {
-      this.keyboard_pressed.set(char, true);
-      // delete from win
-      const idx = this.win.indexOf(char);
-      if (idx !== -1) {
-        this.win.splice(idx, 1);
-      }
-      // check win
-      if (this.win.length === 0) {
-        this.cont = true;
+      if (!this.cont) {
+        this.keyboard_pressed.set(char, true);
+        // delete from win
+        const idx = this.win.indexOf(char);
+        if (idx !== -1) {
+          this.win.splice(idx, 1);
+        }
+        // check win
+        if (this.win.length === 0) {
+          this.cont = true;
+        }
       }
     },
-    keyState(char: string) {
-      return this.keyboard_pressed.get(char);
+    keyState(char: string) : boolean {
+      return this.keyboard_pressed.get(char) || false;
     },
     onMousemove(e: MouseEvent) {
       this.x = (e.clientX-window.innerWidth/2)/window.innerWidth;
       this.y = (e.clientY-window.innerHeight/2)/window.innerHeight;
-      console.log(this.x, this.y);
     },
-    scrollWindow() {
-      window.scrollTo(0, window.innerHeight);
-    }
   },
   components: {
     'Key': Key,
@@ -91,66 +89,68 @@ import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
         <!-- hangman -->
         <div class="flex flex-col w-full items-center my-12">
           <div class="flex">
-            <Blank char="W" :filled="keyState('W')" />
-            <Blank char="E" :filled="keyState('E')" />
-            <Blank char="B" :filled="keyState('B')" />
+            <Blank char="W" :filled="keyState('W')" :fin="cont" />
+            <Blank char="E" :filled="keyState('E')" :fin="cont"/>
+            <Blank char="B" :filled="keyState('B')" :fin="cont"/>
             <div id="spacer" class="w-6" />
-            <Blank char="D" :filled="keyState('D')" />
-            <Blank char="E" :filled="keyState('E')" />
-            <Blank char="V" :filled="keyState('V')" />
-            <Blank char="E" :filled="keyState('E')" />
-            <Blank char="L" :filled="keyState('L')" />
-            <Blank char="O" :filled="keyState('O')" />
-            <Blank char="P" :filled="keyState('P')" />
-            <Blank char="E" :filled="keyState('E')" />
-            <Blank char="R" :filled="keyState('R')" />
+            <Blank char="D" :filled="keyState('D')" :fin="cont"/>
+            <Blank char="E" :filled="keyState('E')" :fin="cont"/>
+            <Blank char="V" :filled="keyState('V')" :fin="cont"/>
+            <Blank char="E" :filled="keyState('E')" :fin="cont"/>
+            <Blank char="L" :filled="keyState('L')" :fin="cont"/>
+            <Blank char="O" :filled="keyState('O')" :fin="cont"/>
+            <Blank char="P" :filled="keyState('P')" :fin="cont"/>
+            <Blank char="E" :filled="keyState('E')" :fin="cont"/>
+            <Blank char="R" :filled="keyState('R')" :fin="cont"/>
           </div>
           <!-- <Keyboard keyPressed="keyboard_pressed" /> -->
           <div class="flex mt-12">
-            <Key @click="keyPressed('Q')" char="Q" :disabled="keyState('Q')" />
-            <Key @click="keyPressed('W')" char="W" :disabled="keyState('W')" />
-            <Key @click="keyPressed('E')" char="E" :disabled="keyState('E')" />
-            <Key @click="keyPressed('R')" char="R" :disabled="keyState('R')" />
-            <Key @click="keyPressed('T')" char="T" :disabled="keyState('T')" />
-            <Key @click="keyPressed('Y')" char="Y" :disabled="keyState('Y')" />
-            <Key @click="keyPressed('U')" char="U" :disabled="keyState('U')" />
-            <Key @click="keyPressed('I')" char="I" :disabled="keyState('I')" />
-            <Key @click="keyPressed('O')" char="O" :disabled="keyState('O')" />
-            <Key @click="keyPressed('P')" char="P" :disabled="keyState('P')" />
+            <Key @click="keyPressed('Q')" char="Q" :disabled="keyState('Q')" :fin="cont"/>
+            <Key @click="keyPressed('W')" char="W" :disabled="keyState('W')" :fin="cont"/>
+            <Key @click="keyPressed('E')" char="E" :disabled="keyState('E')" :fin="cont"/>
+            <Key @click="keyPressed('R')" char="R" :disabled="keyState('R')" :fin="cont"/>
+            <Key @click="keyPressed('T')" char="T" :disabled="keyState('T')" :fin="cont"/>
+            <Key @click="keyPressed('Y')" char="Y" :disabled="keyState('Y')" :fin="cont"/>
+            <Key @click="keyPressed('U')" char="U" :disabled="keyState('U')" :fin="cont"/>
+            <Key @click="keyPressed('I')" char="I" :disabled="keyState('I')" :fin="cont"/>
+            <Key @click="keyPressed('O')" char="O" :disabled="keyState('O')" :fin="cont"/>
+            <Key @click="keyPressed('P')" char="P" :disabled="keyState('P')" :fin="cont"/>
           </div>
           <div class="flex">
-            <Key @click="keyPressed('A')" char="A" :disabled="keyState('A')" />
-            <Key @click="keyPressed('S')" char="S" :disabled="keyState('S')" />
-            <Key @click="keyPressed('D')" char="D" :disabled="keyState('D')" />
-            <Key @click="keyPressed('F')" char="F" :disabled="keyState('F')" />
-            <Key @click="keyPressed('G')" char="G" :disabled="keyState('G')" />
-            <Key @click="keyPressed('H')" char="H" :disabled="keyState('H')" />
-            <Key @click="keyPressed('J')" char="J" :disabled="keyState('J')" />
-            <Key @click="keyPressed('K')" char="K" :disabled="keyState('K')" />
-            <Key @click="keyPressed('L')" char="L" :disabled="keyState('L')" />
+            <Key @click="keyPressed('A')" char="A" :disabled="keyState('A')" :fin="cont"/>
+            <Key @click="keyPressed('S')" char="S" :disabled="keyState('S')" :fin="cont"/>
+            <Key @click="keyPressed('D')" char="D" :disabled="keyState('D')" :fin="cont"/>
+            <Key @click="keyPressed('F')" char="F" :disabled="keyState('F')" :fin="cont"/>
+            <Key @click="keyPressed('G')" char="G" :disabled="keyState('G')" :fin="cont"/>
+            <Key @click="keyPressed('H')" char="H" :disabled="keyState('H')" :fin="cont"/>
+            <Key @click="keyPressed('J')" char="J" :disabled="keyState('J')" :fin="cont"/>
+            <Key @click="keyPressed('K')" char="K" :disabled="keyState('K')" :fin="cont"/>
+            <Key @click="keyPressed('L')" char="L" :disabled="keyState('L')" :fin="cont"/>
           </div>
           <div class="flex">
-            <Key @click="keyPressed('Z')" char="Z" :disabled="keyState('Z')" />
-            <Key @click="keyPressed('X')" char="X" :disabled="keyState('X')" />
-            <Key @click="keyPressed('C')" char="C" :disabled="keyState('C')" />
-            <Key @click="keyPressed('V')" char="V" :disabled="keyState('V')" />
-            <Key @click="keyPressed('B')" char="B" :disabled="keyState('B')" />
-            <Key @click="keyPressed('N')" char="N" :disabled="keyState('N')" />
-            <Key @click="keyPressed('M')" char="M" :disabled="keyState('M')" />
+            <Key @click="keyPressed('Z')" char="Z" :disabled="keyState('Z')" :fin="cont"/>
+            <Key @click="keyPressed('X')" char="X" :disabled="keyState('X')" :fin="cont"/>
+            <Key @click="keyPressed('C')" char="C" :disabled="keyState('C')" :fin="cont"/>
+            <Key @click="keyPressed('V')" char="V" :disabled="keyState('V')" :fin="cont"/>
+            <Key @click="keyPressed('B')" char="B" :disabled="keyState('B')" :fin="cont"/>
+            <Key @click="keyPressed('N')" char="N" :disabled="keyState('N')" :fin="cont"/>
+            <Key @click="keyPressed('M')" char="M" :disabled="keyState('M')" :fin="cont"/>
           </div>
         </div>
       </div>
     </section>
     <!-- cont. -->
     <div class="flex w-full justify-center">
-      <button class="flex flex-col items-center animate-bounce absolute hover:font-bold hover:text-coral-t duration-200" v-if="cont" @click="scrollWindow">
-        <p class="animate-fadeIn mb-1 font-semibold">continue</p>
-        <img src="../assets/homepage/arrow-down.svg" class="w-4 h-4 animate-fadeIn" />
-      </button>
+      <a href="#introduction">
+        <button class="flex flex-col items-center animate-bounce absolute hover:font-bold hover:text-coral-t duration-200" v-if="cont">
+          <p class="animate-fadeIn mb-1 font-semibold">continue</p>
+          <img src="../assets/homepage/arrow-down.svg" class="w-4 h-4 animate-fadeIn" />
+        </button>
+      </a>
     </div>
 
     <!--- SECTION II -->
-    <section class="h-screen w-full bg-[url('./assets/homepage/section2.svg')] bg-no-repeat bg-cover pt-48 px-[8%]">
+    <section id="introduction" class="h-screen w-full bg-[url('./assets/homepage/section2.svg')] bg-no-repeat bg-cover pt-48 px-[8%]">
       <!-- <ImAWebDeveloper class="h-[3rem] mb-12" /> -->
       <img src="../assets/homepage/im_a_web_developer.svg" alt="I'm a web developer." class="h-[3rem] my-12" />
       <p class="text-left mb-12">
