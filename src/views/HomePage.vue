@@ -162,7 +162,7 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
     </div>
 
     <!--- SECTION II -->
-    <section id="introduction" class="min-h-screen w-full bg-[url('./assets/homepage/sec2.svg')] bg-no-repeat bg-cover pt-48 pb-12 pl-[8%] pr-[5%]">
+    <section id="introduction" class="min-h-screen w-full bg-[url('./assets/homepage/sec2.svg')] bg-no-repeat bg-cover pt-48 pb-24 pl-[8%] pr-[5%]">
       <!-- <ImAWebDeveloper class="h-[3rem] mb-12" /> -->
       <img src="../assets/homepage/im_a_web_developer.svg" alt="I'm a web developer." class="h-[3rem] my-12" />
       <p class="text-left mb-12">
