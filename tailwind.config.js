@@ -22,6 +22,10 @@ module.exports = {
       },
       'teal': {
         't': '#1D3935'
+      },
+      'blue': {
+        '100': '#B0EEEA',
+        't': '#223354'
       }
       // 'blue': '#1fb6ff',
       // 'purple': '#7e5bef',
@@ -63,6 +67,9 @@ module.exports = {
         wiggle: 'wiggle 1s ease-in-out infinite',
         fadeIn: 'fadeIn 1s ease-in',
         scrollLeft: 'scrollLeft 10s linear',
+      },
+      backgroundImage: {
+        'texture': "url('./assets/texture.png')"
       }
     },
   },

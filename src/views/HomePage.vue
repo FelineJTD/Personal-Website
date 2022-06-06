@@ -206,9 +206,6 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
       <p class="text-left my-12">
         By the way, <span class="text-white">this website</span> is designed, illustrated, and coded entirely by me ;)
       </p>
-      <!-- <div class="h-48 w-36 bg-coral-500 rounded-3xl">
-        smth
-      </div> -->
     </section>
 
   </div>
