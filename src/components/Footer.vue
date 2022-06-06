@@ -29,7 +29,32 @@
       <!-- SOCIAL MEDIA -->
       <div>
         <h1 class="text-right">Connect with me!</h1>
+        <p>We can collaborate on projects! Or just be friends \(OwO)/</p>
         <div class="flex flex-row justify-end">
+          <!-- GMAIL -->
+          <a href="mailto:feliciasutandijo@gmail.com" target="_blank" rel="noreferrer noopener">
+          <div class="bg-brown-t mt-2 ml-2 rounded-xl hover:bg-coral-400 hover:rotate-90 duration-200">
+          <img src="../assets/icons/email.svg" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
+          </div>
+          </a>
+          <!-- LINKEDIN -->
+          <a href="https://www.linkedin.com/in/felicia-sutandijo-57a570199/" target="_blank" rel="noreferrer noopener">
+          <div class="bg-brown-t mt-2 ml-2 rounded-xl hover:bg-coral-400 hover:rotate-90 duration-200">
+          <img src="../assets/icons/linkedin.svg" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
+          </div>
+          </a>
+          <!-- GITHUB -->
+          <a href="https://github.com/FelineJTD" target="_blank" rel="noreferrer noopener">
+          <div class="bg-brown-t mt-2 ml-2 rounded-xl hover:bg-coral-400 hover:rotate-90 duration-200">
+          <img src="../assets/icons/github.svg" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
+          </div>
+          </a>
+          <!-- INSTAGRAM -->
+          <a href="https://www.instagram.com/felinejtd/" target="_blank" rel="noreferrer noopener">
+          <div class="bg-brown-t mt-2 ml-2 rounded-xl hover:bg-coral-400 hover:rotate-90 duration-200">
+        <img src="../assets/icons/instagram.svg" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
+          </div>
+          </a>
         </div>
       </div>
     </div>
