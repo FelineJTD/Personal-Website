@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="bg-[url('./assets/footer.svg')] min-h-[24rem] -mt-48 xl:-mt-60 xl:min-h-[36rem] flex justify-between items-start px-[8%] shadow-lg w-full relative z-50 text-[#44312E] bg-cover bg-no-repeat top-0">
-    <div class="flex flex-col md:flex-row mt-60 xl:mt-80 pb-12">
+  <div class="bg-[url('./assets/footer.svg')] min-h-[24rem] -mt-36 xl:-mt-40 xl:min-h-[36rem] flex justify-between items-start px-[8%] shadow-lg w-full relative z-50 text-[#44312E] bg-cover bg-no-repeat top-0">
+    <div class="flex flex-col md:flex-row mt-36 md:mt-48 xl:mt-60 pb-12">
       <!-- FEEDBACK -->
       <div>
         <img src="../assets/Feedback.svg" alt="Feedback" class="h-[2.5rem] mb-3"/>
