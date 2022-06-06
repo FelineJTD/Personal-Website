@@ -27,8 +27,8 @@
         </form>
       </div>
       <!-- SOCIAL MEDIA -->
-      <div>
-        <h1 class="text-right">Connect with me!</h1>
+      <div class="text-right">
+        <h1>Connect with me!</h1>
         <p>We can collaborate on projects! Or just be friends \(OwO)/</p>
         <div class="flex flex-row justify-end">
           <!-- GMAIL -->
