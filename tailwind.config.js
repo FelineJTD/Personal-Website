@@ -74,6 +74,10 @@ module.exports = {
       },
       backgroundImage: {
         'texture': "url('./assets/texture.png')"
+      },
+      dropShadow: {
+        '100': '0px 5px 5px rgba(34, 51, 84, 0.5)',
+        '200': '0px 10px 10px rgba(34, 51, 84, 0.25)'
       }
     },
   },
