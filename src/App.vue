@@ -9,8 +9,8 @@ import Footer from './components/Footer.vue'
 
 const routes = {
   '/': HomePage,
-  '/portfolio': ComingSoon,
-  '/about': ComingSoon
+  '/portfolio': Portfolio,
+  '/about': About
 }
 
 export default {
