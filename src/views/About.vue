@@ -33,7 +33,7 @@ export default {
       <ul>
         <li><p>Favourite front-end tech stacks: Vue, React, Next, Tailwind CSS</p></li>
         <li><p>Favourite programming language: Python</p></li>
-        <li><p>I mostly learn from: Youtube, documentations, and Stack Overflow</p></li>
+        <li><p>I mostly learn from: YouTube, documentations, and Stack Overflow</p></li>
       </ul>
     </section>
     
