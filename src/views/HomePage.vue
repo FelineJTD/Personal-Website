@@ -166,7 +166,7 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
       <!-- <ImAWebDeveloper class="h-[3rem] mb-12" /> -->
       <img src="../assets/homepage/im_a_web_developer.svg" alt="I'm a web developer." class="h-[3rem] my-12" />
       <p class="text-left mb-12">
-        I love art and coding. I specialise in frontend development, but I am currently expanding my knowledge of backend development. <br /><br />
+        I love art and coding. I specialise in front-end development, but I am currently expanding my knowledge of backend development. <br /><br />
         Let me show you some of the websites I&apos;ve made.
       </p>
       <!-- <div class="overflow-hidden"> -->
