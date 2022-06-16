@@ -181,7 +181,7 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
           <PortfolioThumbnail 
             title="Joyume"
             desc="Joyume offers kids a unique experience of customising and personalising their own toys, called 'Joyu Friends', which will be specifically created and delivered upon order."
-            link="https://joyume.netlify.app"
+            link="https://joyumefactory.com/"
             image="/portfolio-thumbnail/joyume.png" 
             video="/portfolio-thumbnail/joyume.mp4"
           />

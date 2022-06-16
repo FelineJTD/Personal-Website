@@ -1,15 +1,26 @@
 [
-    { "id": "p1", 
-      "title": "Wispril ITB 2022", 
-      "desc": "A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more.", 
-      "link": "https://paradewisudaitb.com", 
-      "image": "/portfolio-thumbnail/wispril.png", 
-      "video": "/portfolio-thumbnail/wispril.mp4"
-    },
-    { "id": "p2", 
-      "title": "Wispril ITB 2022", 
-      "desc": "A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more.", 
-      "link": "https://paradewisudaitb.com", 
-      "image": "/portfolio-thumbnail/wispril.png", 
-      "video": "/portfolio-thumbnail/wispril.mp4"}
+  { "title": "Wispril ITB 2022", 
+    "desc": "A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more.", 
+    "link": "https://paradewisudaitb.com", 
+    "image": "/portfolio-thumbnail/wispril.png", 
+    "video": "/portfolio-thumbnail/wispril.mp4"
+  },
+  { "title": "Joyume", 
+    "desc": "Joyume offers kids a unique experience of customising and personalising their own toys, called 'Joyu Friends', which will be specifically created and delivered upon order.", 
+    "link": "https://joyumefactory.com/", 
+    "image": "/portfolio-thumbnail/joyume.png", 
+    "video": "/portfolio-thumbnail/joyume.mp4"
+  },
+  { "title": "Mealth", 
+    "desc": "A website featuring a chatbot. Mealth is a safe, comfortable, and supportive space seeking to help and raise awareness about eating disorders in Indonesia.", 
+    "link": "https://mealth.netlify.app", 
+    "image": "/portfolio-thumbnail/mealth.png", 
+    "video": "/portfolio-thumbnail/mealth.mp4"
+  },
+  { "title": "Deoxyde", 
+    "desc": "A school project implementing string matching and regular expression for a mock DNA matching to detect illnesses.", 
+    "link": "https://deoxyde.netlify.app", 
+    "image": "/portfolio-thumbnail/deoxyde.png", 
+    "video": "/portfolio-thumbnail/deoxyde.mp4"
+  }
 ]
