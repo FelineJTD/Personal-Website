@@ -18,7 +18,8 @@ export default {
 
 <template>
   <div class="min-h-screen bg-coral-100 bg-texture bg-blend-overlay pt-12 px-[8%] pb-40 text-teal-t overflow-x-hidden" @mousemove="onMousemove">
-    <aside v-if="window.innerWidth > 976" class="invisible lg:visible absolute top-0 -right-[20px] bg-[url('./assets/about/right.svg')] h-full w-full bg-contain bg-right bg-no-repeat overflow-x-hidden" :style="{ transform: `translateX(${x*20}px)` }">
+    <aside v-if="window.innerWidth > 976" class="invisible lg:visible absolute top-0 right-0 h-full w-full overflow-x-hidden">
+      <img src="../assets/about/right.svg" class="absolute -right-[20px] top-0 h-[100vh]" :style="{ transform: `translateX(${x*20}px)` }"/>
       <img src="../assets/about/feli.png" alt="Feli's photo" class="absolute -right-12 bottom-0 h-[100vh]" :style="{ transform: `translateX(${x*50}px)` }" />
       <img src="../assets/about/circles.svg" class="absolute -right-12 top-16 h-[25%]" :style="{ transform: `translateX(${x*100}px)` }" />
     </aside>
