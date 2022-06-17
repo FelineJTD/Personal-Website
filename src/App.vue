@@ -2,6 +2,7 @@
 import HomePage from './views/HomePage.vue'
 import Portfolio from './views/Portfolio.vue'
 import About from './views/About.vue'
+import Ads from './views/Ads.vue'
 import NotFound from './views/NotFound.vue'
 import ComingSoon from './views/ComingSoon.vue'
 import Navbar from './components/Navbar.vue'
@@ -10,7 +11,8 @@ import Footer from './components/Footer.vue'
 const routes = {
   '/': HomePage,
   '/portfolio': Portfolio,
-  '/about': About
+  '/about': About,
+  '/ads': Ads
 }
 
 export default {
