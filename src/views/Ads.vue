@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
 export default {
   name: "Ads",
   methods: {
     adsenseAddLoad(){
       let inlineScript   = document.createElement("script");
-      inlineScript.type  = "text/javascript";
+      inlineScript.type  = "text/typescript";
       inlineScript.text  = '(adsbygoogle = window.adsbygoogle || []).push({});'
       document.getElementsByTagName('body')[0].appendChild(inlineScript);
     }
