@@ -64,7 +64,8 @@ module.exports = {
         scrollLeft: 'scrollLeft 10s linear',
       },
       backgroundImage: {
-        'texture': "url('./assets/texture.png')"
+        'texture': "url('./assets/texture.png')",
+        'texture25': "url('./assets/texture-25.png')"
       },
       dropShadow: {
         '100': '0px 5px 5px rgba(34, 51, 84, 0.5)',
