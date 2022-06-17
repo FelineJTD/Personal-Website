@@ -39,7 +39,7 @@ export default {
 
 <template>
   <nav>
-    <Navbar />
+    <Navbar :curr="currentPath" />
   </nav>
   <main>
     <component :is="currentView" />
