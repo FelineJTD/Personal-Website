@@ -10,7 +10,6 @@ export default defineComponent({
   },
   props: {
     title: String,
-    desc: String,
     link: String,
     image: String,
     video: String,
@@ -27,7 +26,6 @@ export default defineComponent({
 
 defineProps<{ 
   title: string,
-  desc: string,
   link: string,
   image: string,
   video: string,
@@ -36,14 +34,13 @@ defineProps<{
 </script>
 
 <template>
-  <div class="rounded-xl bg-coral-500 bg-[url('./assets/texture-25.png')] bg-blend-overlay relative mr-12 min-w-[30vw] text-center p-[2%] shadow-xl text-white" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
+  <div class="rounded-xl bg-coral-500 bg-[url('./assets/texture-25.png')] bg-blend-overlay relative mr-6 min-w-[80%] md:min-w-[45%] lg:min-w-[15vw] text-center p-[1rem] md:p-[2%] shadow-xl text-white" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
     <div class="relative shadow-xl">
-      <!-- <img :src="image" class="rounded-xl" /> -->
       <img :src="image" class="rounded-xl" />
-      <video :src="video" v-if="play" class="absolute rounded-xl bottom-0" autoplay loop muted />
+      <video :src="video" v-show="play" class="absolute rounded-xl bottom-0" autoplay loop muted />
     </div>
     <h1 class="mt-6">{{ title }}</h1>
-    <a :href="link" target="_blank" rel="noreferrer noopener" class="text-teal-t hover:text-coral-300 hover:underline duration-300"><p class="font-bold">{{ link }}</p></a>
-    <p class="mt-6">{{ desc }}</p>
+    <a :href="link" target="_blank" rel="noreferrer noopener" class="text-teal-t hover:text-coral-300 hover:underline duration-300"><p class="font-bold break-words text-base lg:text-lg">{{ link }}</p></a>
+    <p class="font-normal text-sm lg:hidden py-2">(tap to play video)</p>
   </div>
 </template>

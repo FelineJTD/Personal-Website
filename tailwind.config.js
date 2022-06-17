@@ -31,15 +31,6 @@ module.exports = {
         '200': '#DE9C65',
         't': '#44312E'
       }
-      // 'blue': '#1fb6ff',
-      // 'purple': '#7e5bef',
-      // 'pink': '#ff49db',
-      // 'orange': '#ff7849',
-      // 'green': '#13ce66',
-      // 'yellow': '#ffc82c',
-      // 'gray-dark': '#273444',
-      // 'gray': '#8492a6',
-      // 'gray-light': '#d3dce6',
     },
     fontFamily: {
       sans: ['Quicksand', 'sans-serif'],
@@ -73,7 +64,8 @@ module.exports = {
         scrollLeft: 'scrollLeft 10s linear',
       },
       backgroundImage: {
-        'texture': "url('./assets/texture.png')"
+        'texture': "url('./assets/texture.png')",
+        'texture25': "url('./assets/texture-25.png')"
       },
       dropShadow: {
         '100': '0px 5px 5px rgba(34, 51, 84, 0.5)',
