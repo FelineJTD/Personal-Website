@@ -29,8 +29,10 @@ export default {
       return this.keyboard_pressed.get(char) || false;
     },
     onMousemove(e: MouseEvent) {
-      this.x = (e.clientX-window.innerWidth/2)/window.innerWidth;
-      this.y = (e.clientY-window.innerHeight/2)/window.innerHeight;
+      if (window.innerWidth > 976) {
+        this.x = (e.clientX-window.innerWidth/2)/window.innerWidth;
+        this.y = (e.clientY-window.innerHeight/2)/window.innerHeight;
+      }
     },
     // scrollLeft() {
     //   let scrollAmount = 0;
@@ -68,23 +70,13 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
 </script>
 
 <template>
-  <div class="bg-coral-100 bg-[url('./assets/texture-25.png')] bg-blend-overlay bg-repeat min-h-screen text-teal-t pt-12 overflow-x-hidden">
+  <div class="bg-coral-100 bg-[url('./assets/texture-25.png')] bg-blend-overlay bg-repeat min-h-screen text-teal-t pt-16 lg:pt-12 overflow-x-hidden">
 
     <!--- SECTION I -->
-    <section class="flex flex-col lg:flex-row min-h-[90vh] w-full items-center justify-center -ml-12 -mb-24" @mousemove="onMousemove">
+    <section class="flex flex-col lg:flex-row min-h-[90vh] w-full items-center justify-center lg:-ml-12 -mb-24 px-[8%]" @mousemove="onMousemove">
       <!-- left -->
-      <div class="mr-6">
-        <!-- image -->
-        
-        <!-- <div class="bg-coral-500 relative h-96 lg:h-[75vh] w-96 lg:w-[75vh] -p-12 overflow-hidden">
-          <img src="../assets/homepage/bottom.png" class="absolute" :style="{ transform: `translate(${-x*20}px, ${-y*10}px)` }" />
-          <img src="../assets/homepage/mid.svg" class="absolute" :style="{ transform: `translate(${-x*35}px, ${-y*15}px)` }" />
-          <img src="../assets/homepage/top.svg" class="absolute" :style="{ transform: `translate(${-x*50}px, ${-y*15}px)` }" />
-          <img src="../assets/homepage/cover.svg" class="absolute" />
-          <img src="../assets/homepage/circles.svg" class="absolute" :style="{ transform: `translate(${-x*75}px, ${-y*30}px)` }" />
-          <img src="../assets/texture.png" class="absolute w-full h-full mix-blend-overlay opacity-25" />
-        </div> -->
-        <div class="bg-coral-500 relative h-96 lg:h-[75vh] w-96 lg:w-[75vh] -p-12 overflow-hidden">
+      <div class="mb-12 lg:mb-0 lg:mr-6">
+        <div class="bg-coral-500 relative h-64 md:h-96 lg:h-[75vh] w-64 md:w-96 lg:w-[75vh] -p-12 overflow-hidden">
           <img src="../assets/homepage/bottom.png" class="absolute" :style="{ transform: `translate(${-x*75}px, ${-y*30}px)` }" />
           <img src="../assets/homepage/mid.svg" class="absolute" :style="{ transform: `translate(${-x*50}px, ${-y*17}px)` }" />
           <img src="../assets/homepage/top.svg" class="absolute" :style="{ transform: `translate(${-x*35}px, ${-y*15}px)` }" />
@@ -94,8 +86,8 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
         </div>
       </div>
       <!-- right -->
-      <div class="text-left">
-        <img src="../assets/homepage/hi_im_feli.svg" alt="Hi, I'm Feli" class="h-[4.5rem] -translate-x-3 mb-12" />
+      <div class="text-center lg:text-left">
+        <img src="../assets/homepage/hi_im_feli.svg" alt="Hi, I'm Feli" class="h-[3rem] md:h-[4.5rem] lg:-translate-x-3 mb-12 w-full lg:w-auto" />
         <h3 class="font-black">My <span class="text-coral-t">profession</span>?</h3>
         <h4>Why don't you guess it?</h4>
         <!-- hangman -->
@@ -154,7 +146,7 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
     <!-- cont. -->
     <div class="flex w-full justify-center">
       <a href="#introduction">
-        <button class="flex flex-col items-center animate-bounce absolute hover:font-bold hover:text-coral-t duration-200" v-if="cont">
+        <button class="flex flex-col items-center animate-bounce mt-24 lg:mt-0 lg:absolute hover:font-bold hover:text-coral-t duration-200" v-if="cont">
           <p class="animate-fadeIn mb-1 font-semibold">continue</p>
           <img src="../assets/homepage/arrow-down.svg" class="w-4 h-4 animate-fadeIn" />
         </button>
@@ -162,15 +154,13 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
     </div>
 
     <!--- SECTION II -->
-    <section id="introduction" class="min-h-screen w-full bg-[url('./assets/homepage/sec2.svg')] bg-no-repeat bg-cover pt-48 pb-24 pl-[8%] pr-[5%]">
-      <!-- <ImAWebDeveloper class="h-[3rem] mb-12" /> -->
+    <section id="introduction" class="min-h-screen w-full bg-[url('./assets/homepage/sec2.svg')] bg-no-repeat bg-cover pt-48 pb-24 px-[8%]">
       <img src="../assets/homepage/im_a_web_developer.svg" alt="I'm a web developer." class="h-[3rem] my-12" />
       <p class="text-left mb-12">
         I love art and coding. I specialise in front-end development, but I am currently expanding my knowledge of backend development. <br /><br />
         Let me show you some of the websites I&apos;ve made.
       </p>
-      <!-- <div class="overflow-hidden"> -->
-        <div id="portfolio" class="flex flex-row overflow-x-scroll">
+        <div id="portfolio" class="flex flex-row w-full overflow-x-scroll lg:overflow-x-visible">
           <PortfolioThumbnail 
             title="Wispril ITB 2022"
             link="https://paradewisudaitb.com"
@@ -192,7 +182,7 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
           <!-- <div class="h-full flex flex-col justify-center absolute right-0 pr-3 pl-12 bg-gradient-to-r from-[rgba(256,256,256,0)] to-[rgba(256,256,256,0.5)] hover:to-coral-t rounded-3xl animate-pulse hover:animate-none duration-500"> -->
           <div class="flex flex-col justify-center">
             <a href="/portfolio" class="flex flex-row items-center animate-pulse hover:animate-none">
-              <h2 class="text-center vertical-rl rotate-180">more</h2>
+              <h2 class="text-center vertical-rl rotate-180 -ml-2">more</h2>
               <img src="../assets/homepage/right-arrow.svg" class="w-6 h-6 ml-2" />
             </a>
           </div>
