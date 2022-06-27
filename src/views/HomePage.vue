@@ -56,17 +56,7 @@ export default {
 import Key from '../components/Key.vue'
 import Blank from '../components/Blank.vue'
 import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
-// const HiImFeli = '../assets/homepage/hi_im_feli.svg'
-// import ImAWebDeveloper from '../assets/homepage/im_a_web_developer.svg'
-// import Key1 from '../components/Key.vue';
 
-// defineProps<{ msg: string }>()
-
-// const count = ref(0)
-// let keyboard_pressed = new Map<string, boolean>([
-//   ["A", false],
-//   ["E", false]
-// ]);
 </script>
 
 <template>

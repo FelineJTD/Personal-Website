@@ -36,7 +36,7 @@ defineProps<{
 <template>
   <div class="rounded-xl bg-coral-500 bg-[url('./assets/texture-25.png')] bg-blend-overlay relative mr-6 min-w-[80%] md:min-w-[45%] lg:min-w-[15vw] text-center p-[1rem] md:p-[2%] shadow-xl text-white" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
     <div class="relative shadow-xl">
-      <img :src="image" class="rounded-xl" />
+      <img :src="image" :alt="title" class="rounded-xl" />
       <video :src="video" v-if="play" class="absolute rounded-xl bottom-0" autoplay loop muted />
     </div>
     <h1 class="mt-6">{{ title }}</h1>
