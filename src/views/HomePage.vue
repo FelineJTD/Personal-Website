@@ -135,7 +135,7 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
     </section>
     <!-- cont. -->
     <div class="flex w-full justify-center translate-y-12">
-      <a :href="cont? '#introduction': none">
+      <a href="#introduction" :class="cont? 'block':'hidden'">
         <button class="flex flex-col items-center animate-bounce mt-12 lg:mt-0 lg:absolute hover:font-bold hover:text-coral-t duration-200" :class="cont? 'visible':'invisible'">
           <p class="animate-fadeIn mb-1 font-semibold">continue</p>
           <img src="../assets/homepage/arrow-down.svg" alt="" class="w-4 h-4 animate-fadeIn" />
