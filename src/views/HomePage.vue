@@ -77,12 +77,12 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
       <!-- left -->
       <div class="mb-12 lg:mb-0 lg:mr-6">
         <div class="bg-coral-500 relative h-64 md:h-96 lg:h-[75vh] w-64 md:w-96 lg:w-[75vh] -p-12 overflow-hidden">
-          <img src="../assets/homepage/bottom.png" class="absolute" :style="{ transform: `translate(${-x*75}px, ${-y*30}px)` }" />
-          <img src="../assets/homepage/mid.svg" class="absolute" :style="{ transform: `translate(${-x*50}px, ${-y*17}px)` }" />
-          <img src="../assets/homepage/top.svg" class="absolute" :style="{ transform: `translate(${-x*35}px, ${-y*15}px)` }" />
-          <img src="../assets/homepage/cover.svg" class="absolute object-cover" />
-          <img src="../assets/homepage/circles.svg" class="absolute" :style="{ transform: `translate(${-x*20}px, ${-y*10}px)` }" />
-          <img src="../assets/texture.png" class="absolute w-full h-full mix-blend-overlay opacity-25" />
+          <img src="../assets/homepage/bottom.png" alt="" class="absolute" :style="{ transform: `translate(${-x*75}px, ${-y*30}px)` }" />
+          <img src="../assets/homepage/mid.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*50}px, ${-y*17}px)` }" />
+          <img src="../assets/homepage/top.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*35}px, ${-y*15}px)` }" />
+          <img src="../assets/homepage/cover.svg" alt="" class="absolute object-cover" />
+          <img src="../assets/homepage/circles.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*20}px, ${-y*10}px)` }" />
+          <img src="../assets/texture-25.png" alt="" class="absolute w-full h-full mix-blend-overlay" />
         </div>
       </div>
       <!-- right -->
@@ -148,7 +148,7 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
       <a :href="cont? '#introduction': none">
         <button class="flex flex-col items-center animate-bounce mt-12 lg:mt-0 lg:absolute hover:font-bold hover:text-coral-t duration-200" :class="cont? 'visible':'invisible'">
           <p class="animate-fadeIn mb-1 font-semibold">continue</p>
-          <img src="../assets/homepage/arrow-down.svg" class="w-4 h-4 animate-fadeIn" />
+          <img src="../assets/homepage/arrow-down.svg" alt="" class="w-4 h-4 animate-fadeIn" />
         </button>
       </a>
     </div>
