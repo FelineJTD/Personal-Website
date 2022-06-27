@@ -34,25 +34,25 @@
           <!-- GMAIL -->
           <a href="mailto:feliciasutandijo@gmail.com" target="_blank" rel="noreferrer noopener">
           <div class="h-12 w-12 bg-coral-t mt-2 ml-2 rounded-xl hover:bg-[#F54336] hover:rotate-90 duration-200">
-          <img src="../assets/icons/email.svg" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
+          <img src="../assets/icons/email.svg" alt="Email Icon" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
           </div>
           </a>
           <!-- LINKEDIN -->
           <a href="https://www.linkedin.com/in/felicia-sutandijo-57a570199/" target="_blank" rel="noreferrer noopener">
           <div class="h-12 w-12 bg-coral-t mt-2 ml-2 rounded-xl hover:bg-[#0A66C2] hover:rotate-90 duration-200">
-          <img src="../assets/icons/linkedin.svg" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
+          <img src="../assets/icons/linkedin.svg" alt="LinkedIn Icon" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
           </div>
           </a>
           <!-- GITHUB -->
           <a href="https://github.com/FelineJTD" target="_blank" rel="noreferrer noopener">
           <div class="h-12 w-12 bg-coral-t mt-2 ml-2 rounded-xl hover:bg-[#000000] hover:rotate-90 duration-200">
-          <img src="../assets/icons/github.svg" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
+          <img src="../assets/icons/github.svg" alt="Github Icon" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
           </div>
           </a>
           <!-- INSTAGRAM -->
           <a href="https://www.instagram.com/felinejtd/" target="_blank" rel="noreferrer noopener">
           <div class="instabg h-12 w-12 bg-coral-t mt-2 ml-2 rounded-xl hover:bg-[#DD2A7B] -rotate-90 hover:rotate-0 duration-200">
-        <img src="../assets/icons/instagram.svg" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
+        <img src="../assets/icons/instagram.svg" alt="Instagram Icon" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
           </div>
           </a>
         </div>
