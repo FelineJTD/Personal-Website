@@ -174,7 +174,7 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
             <a href="/portfolio" class="flex flex-row items-center animate-pulse hover:animate-none">
               <p class="text-center vertical-rl rotate-180 -ml-2 hidden">Portfolio</p>
               <h2 class="text-center vertical-rl rotate-180 -ml-2">more</h2>
-              <img src="../assets/homepage/right-arrow.svg" class="w-6 h-6 ml-2" />
+              <img src="../assets/homepage/right-arrow.svg" alt="" class="w-6 h-6 ml-2" />
             </a>
           </div>
           <!-- </div> -->
