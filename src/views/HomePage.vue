@@ -182,6 +182,7 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
           <!-- <div class="h-full flex flex-col justify-center absolute right-0 pr-3 pl-12 bg-gradient-to-r from-[rgba(256,256,256,0)] to-[rgba(256,256,256,0.5)] hover:to-coral-t rounded-3xl animate-pulse hover:animate-none duration-500"> -->
           <div class="flex flex-col justify-center">
             <a href="/portfolio" class="flex flex-row items-center animate-pulse hover:animate-none">
+              <!-- Load more portfolio -->
               <h2 class="text-center vertical-rl rotate-180 -ml-2">more</h2>
               <img src="../assets/homepage/right-arrow.svg" class="w-6 h-6 ml-2" />
             </a>
