@@ -1,8 +1,10 @@
 <script lang="ts">
+import portfolios from "../data/portfolios.json";
 export default {
   name: 'HomePage',
   data() {
     return {
+      portfolios,
       keyboard_pressed: new Map<string, boolean>(),
       win: ['W', 'E', 'B', 'D', 'V', 'L', 'O', 'P', 'R'],
       cont: false,
@@ -48,14 +50,14 @@ export default {
   components: {
     'Key': Key,
     'Blank': Blank,
-    'PortfolioThumbnail': PortfolioThumbnail,
+    'PortfolioCard': PortfolioCard,
   },
 }
 // import { ref } from 'vue'
 // import Keyboard from '../components/Keyboard.vue'
 import Key from '../components/Key.vue'
 import Blank from '../components/Blank.vue'
-import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
+import PortfolioCard from '../components/PortfolioCard.vue';
 
 </script>
 
@@ -63,9 +65,9 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
   <div class="bg-coral-100 bg-[url('./assets/texture-25.png')] bg-blend-overlay bg-repeat min-h-screen text-teal-t pt-16 lg:pt-12 overflow-x-hidden">
 
     <!--- SECTION I -->
-    <section class="flex flex-col lg:gap-6 xl:gap-[5%] lg:flex-row min-h-[90vh] h-fit max-h-[100vh] w-full items-center justify-center lg:-ml-12 -mb-24 px-[8%]" @mousemove="onMousemove">
+    <section class="flex flex-col my-24 lg:my-0 lg:gap-6 xl:gap-[5%] lg:flex-row min-h-[90vh] h-fit max-h-[100vh] w-full items-center justify-center lg:-ml-12 -mb-24 px-[8%]" @mousemove="onMousemove">
       <!-- left -->
-      <div class="mb-12 lg:mb-0">
+      <div>
         <div class="bg-coral-500 relative h-64 md:h-96 lg:h-[75vh] xl:h-[50vh] w-64 md:w-96 lg:w-[75vh] xl:w-[50vh] -p-12 overflow-hidden">
           <img src="../assets/homepage/bottom.png" alt="" class="absolute" :style="{ transform: `translate(${-x*75}px, ${-y*30}px)` }" />
           <img src="../assets/homepage/mid.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*50}px, ${-y*17}px)` }" />
@@ -151,23 +153,29 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
         Let me show you some of the websites I&apos;ve made.
       </p>
         <div id="portfolio" class="flex flex-row w-full overflow-x-scroll lg:overflow-x-visible">
-          <PortfolioThumbnail 
-            title="Wispril ITB 2022"
-            link="https://paradewisudaitb.com"
-            image="/portfolio-thumbnail/wispril.png" 
-            video="/portfolio-thumbnail/wispril.mp4"
+          <PortfolioCard
+            :is-thumbnail="true"
+            :title="portfolios[0].title"
+            :islinkactive="portfolios[0].isLinkActive"
+            :link="portfolios[0].link"
+            :image="portfolios[0].image"
+            :video="portfolios[0].video"
           />
-          <PortfolioThumbnail 
-            title="Joyume"
-            link="https://joyumefactory.com"
-            image="/portfolio-thumbnail/joyume.png" 
-            video="/portfolio-thumbnail/joyume.mp4"
+          <PortfolioCard
+            :is-thumbnail="true"
+            :title="portfolios[1].title"
+            :islinkactive="portfolios[1].isLinkActive"
+            :link="portfolios[1].link"
+            :image="portfolios[1].image"
+            :video="portfolios[1].video"
           />
-          <PortfolioThumbnail 
-            title="Mealth"
-            link="https://mealth.netlify.app"
-            image="/portfolio-thumbnail/mealth.png" 
-            video="/portfolio-thumbnail/mealth.mp4"
+          <PortfolioCard
+            :is-thumbnail="true"
+            :title="portfolios[2].title"
+            :islinkactive="portfolios[2].isLinkActive"
+            :link="portfolios[2].link"
+            :image="portfolios[2].image"
+            :video="portfolios[2].video"
           />
           <!-- <div class="h-full flex flex-col justify-center absolute right-0 pr-3 pl-12 bg-gradient-to-r from-[rgba(256,256,256,0)] to-[rgba(256,256,256,0.5)] hover:to-coral-t rounded-3xl animate-pulse hover:animate-none duration-500"> -->
           <div class="flex flex-col justify-center">

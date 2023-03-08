@@ -13,6 +13,13 @@
     "image": "/portfolio-thumbnail/braga.png", 
     "video": "/portfolio-thumbnail/braga.mp4"    
   },
+  { "title": "Wispril ITB 2022", 
+    "desc": "A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more.", 
+    "isLinkActive": false,
+    "link": "https://paradewisudaitb.com", 
+    "image": "/portfolio-thumbnail/wispril.png", 
+    "video": "/portfolio-thumbnail/wispril.mp4"
+  },
   { "title": "Hyundai QMS", 
     "desc": "A queueing management system built for Hyundai Motor Company. This system is used to manage the queue of customers waiting to get their cars serviced.", 
     "isLinkActive": false,
@@ -26,13 +33,6 @@
     "link": "-", 
     "image": "/portfolio-thumbnail/geodashboard.png", 
     "video": "/portfolio-thumbnail/geodashboard.mp4"    
-  },
-  { "title": "Wispril ITB 2022", 
-    "desc": "A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more.", 
-    "isLinkActive": false,
-    "link": "https://paradewisudaitb.com", 
-    "image": "/portfolio-thumbnail/wispril.png", 
-    "video": "/portfolio-thumbnail/wispril.mp4"
   },
   { "title": "Joyume", 
     "desc": "Joyume offers kids a unique experience of customising and personalising their own toys, called 'Joyu Friends', which will be specifically created and delivered upon order.",
