@@ -11,6 +11,7 @@ export default defineComponent({
   props: {
     title: String,
     desc: String,
+    islinkactive: Boolean,
     link: String,
     image: String,
     video: String,
@@ -28,6 +29,7 @@ export default defineComponent({
 defineProps<{ 
   title: string,
   desc: string,
+  islinkactive: boolean,
   link: string,
   image: string,
   video: string,
@@ -42,7 +44,8 @@ defineProps<{
       <video :src="video" v-if="play" class="absolute rounded-xl bottom-0" autoplay loop muted />
     </div>
     <h1 class="mt-6">{{ title }}</h1>
-    <a :href="link" target="_blank" class="text-teal-t hover:text-coral-300 hover:underline duration-300"><p class="font-bold">{{ link }}</p></a>
+    <a :href="islinkactive? link : undefined" target="_blank" :class="islinkactive ? 'hover:text-coral-300 hover:underline' : 'opacity-30'" class="text-teal-t duration-300 w-full"><p class="font-bold text-base">{{ link }}</p></a>
     <p class="mt-6">{{ desc }}</p>
+
   </div>
 </template>
