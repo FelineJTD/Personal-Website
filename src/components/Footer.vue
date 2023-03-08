@@ -38,7 +38,7 @@
           </div>
           </a>
           <!-- LINKEDIN -->
-          <a href="https://www.linkedin.com/in/felicia-sutandijo-57a570199/" target="_blank" rel="noreferrer noopener">
+          <a href="https://www.linkedin.com/in/felicia-sutandijo/" target="_blank" rel="noreferrer noopener">
           <div class="h-12 w-12 bg-coral-t mt-2 ml-2 rounded-xl hover:bg-[#0A66C2] hover:rotate-90 duration-200">
           <img src="../assets/icons/linkedin.svg" alt="LinkedIn Icon" class="p-2 h-12 w-12 hover:-rotate-90 duration-300" />
           </div>
