@@ -63,23 +63,23 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
   <div class="bg-coral-100 bg-[url('./assets/texture-25.png')] bg-blend-overlay bg-repeat min-h-screen text-teal-t pt-16 lg:pt-12 overflow-x-hidden">
 
     <!--- SECTION I -->
-    <section class="flex flex-col lg:flex-row min-h-[90vh] w-full items-center justify-center lg:-ml-12 -mb-24 px-[8%]" @mousemove="onMousemove">
+    <section class="flex flex-col lg:gap-6 xl:gap-[5%] lg:flex-row min-h-[90vh] h-fit max-h-[100vh] w-full items-center justify-center lg:-ml-12 -mb-24 px-[8%]" @mousemove="onMousemove">
       <!-- left -->
-      <div class="mb-12 lg:mb-0 lg:mr-6">
-        <div class="bg-coral-500 relative h-64 md:h-96 lg:h-[75vh] w-64 md:w-96 lg:w-[75vh] -p-12 overflow-hidden">
+      <div class="mb-12 lg:mb-0">
+        <div class="bg-coral-500 relative h-64 md:h-96 lg:h-[75vh] xl:h-[50vh] w-64 md:w-96 lg:w-[75vh] xl:w-[50vh] -p-12 overflow-hidden">
           <img src="../assets/homepage/bottom.png" alt="" class="absolute" :style="{ transform: `translate(${-x*75}px, ${-y*30}px)` }" />
           <img src="../assets/homepage/mid.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*50}px, ${-y*17}px)` }" />
           <img src="../assets/homepage/top.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*35}px, ${-y*15}px)` }" />
-          <img src="../assets/homepage/cover.svg" alt="" class="absolute object-cover" />
+          <img src="../assets/homepage/cover.svg" alt="" class="absolute object-cover scale-105" />
           <img src="../assets/homepage/circles.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*20}px, ${-y*10}px)` }" />
           <img src="../assets/texture-25.png" alt="" class="absolute w-full h-full mix-blend-overlay" />
         </div>
       </div>
       <!-- right -->
-      <div class="text-center lg:text-left">
-        <img src="../assets/homepage/hi_im_feli.svg" alt="Hi, I'm Feli" class="h-[3rem] md:h-[4.5rem] lg:-translate-x-3 mb-12 w-full lg:w-auto" />
-        <h3 class="font-black">My <span class="text-coral-t">profession</span>?</h3>
-        <h4>Why don't you guess it?</h4>
+      <div class="text-center lg:text-left py-24">
+        <img src="../assets/homepage/hi_im_feli.svg" alt="Hi, I'm Feli" class="h-[3rem] md:h-[3.5rem] lg:-translate-x-3 mb-6 w-full lg:w-auto" />
+        <p class="text-2xl font-black">My <span class="text-coral-t">profession</span>?</p>
+        <p class="text-xl">Why don't you guess it?</p>
         <!-- hangman -->
         <div class="flex flex-col w-full items-center my-12">
           <div class="flex">
@@ -98,7 +98,7 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
             <Blank char="R" :filled="keyState('R')" :fin="cont"/>
           </div>
           <!-- <Keyboard keyPressed="keyboard_pressed" /> -->
-          <div class="flex mt-12">
+          <div class="flex mt-8">
             <Key @click="keyPressed('Q')" char="Q" :disabled="keyState('Q')" :fin="cont"/>
             <Key @click="keyPressed('W')" char="W" :disabled="keyState('W')" :fin="cont"/>
             <Key @click="keyPressed('E')" char="E" :disabled="keyState('E')" :fin="cont"/>
@@ -134,8 +134,8 @@ import PortfolioThumbnail from '../components/PortfolioThumbnail.vue';
       </div>
     </section>
     <!-- cont. -->
-    <div class="flex w-full justify-center translate-y-12">
-      <a href="#introduction" :class="cont? 'block':'hidden'">
+    <div class="flex w-full justify-center">
+      <a href="#introduction" :class="cont? 'block min-w-[5rem] h-6':'hidden'">
         <button class="flex flex-col items-center animate-bounce mt-12 lg:mt-0 lg:absolute hover:font-bold hover:text-coral-t duration-200" :class="cont? 'visible':'invisible'">
           <p class="animate-fadeIn mb-1 font-semibold">continue</p>
           <img src="../assets/homepage/arrow-down.svg" alt="" class="w-4 h-4 animate-fadeIn" />
