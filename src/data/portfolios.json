@@ -36,8 +36,8 @@
   },
   { "title": "Joyume", 
     "desc": "Joyume offers kids a unique experience of customising and personalising their own toys, called 'Joyu Friends', which will be specifically created and delivered upon order.",
-    "isLinkActive": false, 
-    "link": "https://joyumefactory.com/", 
+    "isLinkActive": true, 
+    "link": "https://joyume.netlify.app/", 
     "image": "/portfolio-thumbnail/joyume.png", 
     "video": "/portfolio-thumbnail/joyume.mp4"
   },
