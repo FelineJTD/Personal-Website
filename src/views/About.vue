@@ -36,10 +36,10 @@ export default {
         <li><p>Favourite programming language: Python</p></li>
         <li><p>I mostly learn from: YouTube, documentations, and Stack Overflow</p></li>
       </ul>
-      <p class="mt-12 text-base" v-if="window.innerWidth > 780">P.S. There is an easter egg on this page ;)</p>
-      <p class="mt-2 md:mb-6 text-base" v-if="window.innerWidth > 780">P.S.S. Hit Ctrl+A</p>
+      <!-- <p class="mt-12 text-base" v-if="window.innerWidth > 780">P.S. There is an easter egg on this page ;)</p>
+      <p class="mt-2 md:mb-6 text-base" v-if="window.innerWidth > 780">P.S.S. Hit Ctrl+A</p> -->
       <!-- <p class="text-coral-100 text-xs md:text-xl" v-if="window.innerHeight >= 900">HIRE ME AAAAAAA <br /> I WANNA MAKE MORE PRETTY WEBSIIITEESSS</p> -->
-      <p class="text-coral-100 text-xs md:text-xl" v-if="window.innerWidth > 780">IISMAAAA PLEASE ACCEPT MEEEE <br /> I WANNA MEET FOREIGNERS AND SHOW THEM INDONESIA IS COOOOLLL</p>
+      <!-- <p class="text-coral-100 text-xs md:text-xl" v-if="window.innerWidth > 780">IISMAAAA PLEASE ACCEPT MEEEE <br /> I WANNA MEET FOREIGNERS AND SHOW THEM INDONESIA IS COOOOLLL</p> -->
     </section>
     
   </div>
