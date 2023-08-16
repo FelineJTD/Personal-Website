@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{ 
+  curr: string
+}>()
+</script>
 
 <template>
-  <div class="bg-[url('./assets/footer.svg')] min-h-[24rem] -mt-36 xl:-mt-40 xl:min-h-[36rem] flex justify-between items-start px-[8%] shadow-lg w-full relative z-40 text-teal-t bg-cover bg-no-repeat top-0">
+  <div :class="curr=='/countdown' && 'hidden'" class="bg-[url('./assets/footer.svg')] min-h-[24rem] -mt-36 xl:-mt-40 xl:min-h-[36rem] flex justify-between items-start px-[8%] shadow-lg w-full relative z-40 text-teal-t bg-cover bg-no-repeat top-0">
     <div class="flex flex-col md:flex-row mt-36 md:mt-48 xl:mt-60 pb-12 justify-between w-full items-end">
       <!-- FEEDBACK -->
       <section class="w-full md:w-auto mb-12 md:mb-0">

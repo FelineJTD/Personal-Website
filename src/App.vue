@@ -7,12 +7,14 @@ import NotFound from './views/NotFound.vue'
 import ComingSoon from './views/ComingSoon.vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import Countdown from './views/Countdown.vue'
 
 const routes = {
   '/': HomePage,
   '/portfolio': Portfolio,
   '/about': About,
-  '/ads': Ads
+  '/ads': Ads,
+  '/countdown': Countdown,
 }
 
 export default {
@@ -47,7 +49,7 @@ export default {
     <component :is="currentView" />
   </main>
   <footer>
-    <Footer />
+    <Footer :curr="currentPath" />
   </footer>
 </template>
 
