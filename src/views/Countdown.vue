@@ -5,9 +5,19 @@ export default {
     return {
       start_date: new Date() > new Date("2023-08-21") ? new Date() : new Date("2023-08-21"),
       end_date: new Date("2024-02-06"),
+      money_left: 0,
     };
   },
   methods: {
+    monthsLeft() {
+      return Math.ceil((this.end_date.getTime() - this.start_date.getTime())/(1000*60*60*24*30));
+    },
+    weeksLeft() {
+      return Math.ceil((this.end_date.getTime() - this.start_date.getTime())/(1000*60*60*24*7));
+    },
+    daysLeft() {
+      return Math.ceil((this.end_date.getTime() - this.start_date.getTime())/(1000*60*60*24));
+    },
   },
   components: {
   },
@@ -17,10 +27,17 @@ export default {
 
 <template>
   <div class="flex flex-col justify-center items-center py-12 px-6 min-h-screen bg-coral-100">
-    <h1 class="text-center">
-      <span class="text-teal-t text-[5rem] leading-snug">{{Math.ceil((end_date.getTime() - start_date.getTime())/(1000*60*60*24))}}<br /></span>
+    <h1 class="text-center mb-12">
+      <span class="text-teal-t text-[5rem] leading-snug">{{daysLeft()}}<br /></span>
       <span class="text-coral-t text-lg">days left in the Netherlands</span>
     </h1>
+
+    <p class="text-teal-t mb-4">I still have <input type="number" v-model="money_left" class="text-center text-coral-t text-lg bg-transparent border-b-2 border-coral-t focus:outline-none focus:border-teal-t bg-white" /> euros left,</p>
+
+    <p class="text-teal-t">which equals to</p>
+    <p class="text-coral-t leading-snug">{{(money_left/monthsLeft()).toFixed(2)}}<span class="text-teal-t"> euros per month, or</span></p>
+    <p class="text-coral-t leading-snug">{{(money_left/weeksLeft()).toFixed(2)}}<span class="text-teal-t"> euros per week, or</span></p>
+    <p class="text-coral-t leading-snug">{{(money_left/daysLeft()).toFixed(2)}}<span class="text-teal-t"> euros per day.</span></p>
   </div>
 </template>
 
