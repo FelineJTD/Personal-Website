@@ -32,12 +32,12 @@ export default {
       <span class="text-coral-t text-lg">days left in the Netherlands</span>
     </h1>
 
-    <p class="text-teal-t mb-4">I still have <input type="number" v-model="money_left" class="text-center text-coral-t text-lg bg-transparent border-b-2 border-coral-t focus:outline-none focus:border-teal-t bg-white" /> euros left,</p>
+    <p class="text-teal-t mb-4 text-center">I still have <input type="number" v-model="money_left" class="text-center text-coral-t text-lg bg-transparent border-b-2 border-coral-t focus:outline-none focus:border-teal-t bg-white flex-grow w-24 md:w-auto" /> euros left,</p>
 
-    <p class="text-teal-t">which equals to</p>
-    <p class="text-coral-t leading-snug">{{(money_left/monthsLeft()).toFixed(2)}}<span class="text-teal-t"> euros per month, or</span></p>
-    <p class="text-coral-t leading-snug">{{(money_left/weeksLeft()).toFixed(2)}}<span class="text-teal-t"> euros per week, or</span></p>
-    <p class="text-coral-t leading-snug">{{(money_left/daysLeft()).toFixed(2)}}<span class="text-teal-t"> euros per day.</span></p>
+    <p class="text-teal-t text-center">which equals to</p>
+    <p class="text-coral-t leading-snug text-center">{{(money_left/monthsLeft()).toFixed(2)}}<span class="text-teal-t"> euros per month, or</span></p>
+    <p class="text-coral-t leading-snug text-center">{{(money_left/weeksLeft()).toFixed(2)}}<span class="text-teal-t"> euros per week, or</span></p>
+    <p class="text-coral-t leading-snug text-center">{{(money_left/daysLeft()).toFixed(2)}}<span class="text-teal-t"> euros per day.</span></p>
   </div>
 </template>
 
