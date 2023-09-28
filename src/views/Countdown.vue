@@ -20,7 +20,7 @@ export default {
       return Math.ceil((this.end_date.getTime() - this.start_date.getTime())/(1000*60*60*24));
     },
     totalDays() {
-      return Math.ceil((this.end_date.getTime() - this.real_start_date)/(1000*60*60*24*30));
+      return Math.ceil((this.end_date.getTime() - this.real_start_date.getTime())/(1000*60*60*24*30));
     },
   },
   components: {
