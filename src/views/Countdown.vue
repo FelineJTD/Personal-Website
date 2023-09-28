@@ -3,6 +3,7 @@ export default {
   name: 'Countdown',
   data() {
     return {
+      real_start_date: new Date("2021-08-21"),
       start_date: new Date() > new Date("2023-08-21") ? new Date() : new Date("2023-08-21"),
       end_date: new Date("2024-02-06"),
       money_left: 0,
@@ -18,6 +19,9 @@ export default {
     daysLeft() {
       return Math.ceil((this.end_date.getTime() - this.start_date.getTime())/(1000*60*60*24));
     },
+    totalDays() {
+      return Math.ceil((this.end_date.getTime() - this.real_start_date)/(1000*60*60*24*30));
+    },
   },
   components: {
   },
@@ -32,12 +36,12 @@ export default {
       <span class="text-coral-t text-lg">days left in the Netherlands</span>
     </h1>
 
-    <p class="text-teal-t mb-4 text-center">I still have <input type="number" v-model="money_left" class="text-center text-coral-t text-lg bg-transparent border-b-2 border-coral-t focus:outline-none focus:border-teal-t bg-white flex-grow w-24 md:w-auto" /> euros left,</p>
+    <!-- <p class="text-teal-t mb-4 text-center">I still have <input type="number" v-model="money_left" class="text-center text-coral-t text-lg bg-transparent border-b-2 border-coral-t focus:outline-none focus:border-teal-t bg-white flex-grow w-24 md:w-auto" /> euros left,</p> -->
 
-    <p class="text-teal-t text-center">which equals to</p>
-    <p class="text-coral-t leading-snug text-center">{{(money_left/monthsLeft()).toFixed(2)}}<span class="text-teal-t"> euros per month, or</span></p>
-    <p class="text-coral-t leading-snug text-center">{{(money_left/weeksLeft()).toFixed(2)}}<span class="text-teal-t"> euros per week, or</span></p>
-    <p class="text-coral-t leading-snug text-center">{{(money_left/daysLeft()).toFixed(2)}}<span class="text-teal-t"> euros per day.</span></p>
+    <p class="text-teal-t text-center">which roughly equals to</p>
+    <p class="text-coral-t leading-snug text-center">{{weeksLeft()}}<span class="text-teal-t"> weeks left, or</span></p>
+    <p class="text-coral-t leading-snug text-center">{{monthsLeft()}}<span class="text-teal-t"> months left, or</span></p>
+    <p class="text-coral-t leading-snug text-center">{{(daysLeft()/totalDays()).toFixed(2)}}<span class="text-teal-t">% of time left.</span></p>
   </div>
 </template>
 
