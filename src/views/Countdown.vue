@@ -37,7 +37,7 @@ export default {
 
     <p class="text-teal-t text-center">which roughly equals to</p>
     <p class="text-coral-t leading-snug text-center">{{weeksLeft()}}<span class="text-teal-t"> weeks left, or</span></p>
-    <p class="text-coral-t leading-snug text-center">{{monthsLeft()}}<span class="text-teal-t"> months left, or</span></p>
+    <p class="text-coral-t leading-snug text-center">{{monthsLeft()}}<span class="text-teal-t"> months left.</span></p>
   </div>
 </template>
 
