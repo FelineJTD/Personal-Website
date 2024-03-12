@@ -4,14 +4,14 @@
     "isLinkActive": true,
     "link": "https://journal.feliciasutandijo.my.id", 
     "image": "/portfolio-thumbnail/journal.png", 
-    "video": "/portfolio-thumbnail/journal.mkv"    
+    "video": "/portfolio-thumbnail/journal.mp3"    
   },
   { "title": "Effie", 
     "desc": "Effie is a web-based application that helps users to manage links. It's like a Google Drive for links! Or maybe a next level bookmarking tool.", 
     "isLinkActive": true,
     "link": "https://effie.boo", 
     "image": "/portfolio-thumbnail/effie.png", 
-    "video": "/portfolio-thumbnail/effie.mkv"    
+    "video": "/portfolio-thumbnail/effie.mp4"    
   },
   { "title": "Braga Technologies", 
     "desc": "A company website for Braga Technologies, displaying the company's profile, services, and portfolio. Notably, I am really proud of this website's complex animations.", 
@@ -25,7 +25,7 @@
     "isLinkActive": true,
     "link": "https://jdih.kemlu.go.id/", 
     "image": "/portfolio-thumbnail/jdih-kemlu.png", 
-    "video": "/portfolio-thumbnail/jdih-kemlu.mkv"    
+    "video": "/portfolio-thumbnail/jdih-kemlu.mp4"    
   },
   { "title": "Wispril ITB 2022", 
     "desc": "A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more.", 
