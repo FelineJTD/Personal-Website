@@ -33,7 +33,7 @@ export default {
       You can hover on each card to watch the demo video. 
       Do note that it may not play right away since the videos are not pre-downloaded to save mobile data.
     </p>
-    <section class="flex w-full flex-wrap justify-between">
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
       <PortfolioCard v-for="portfolio in portfolios" :key='portfolio.title' :isThumbnail="false" :title="portfolio.title" :desc="portfolio.desc" :islinkactive="portfolio.isLinkActive" :link="portfolio.link" :image="portfolio.image" :video="portfolio.video" />
     </section>
     <p class="text-teal-t">* <a href="mailto:feliciasutandijo@gmail.com" class="hover:text-coral-400 duration-300">Contact me</a> if you are interested in looking at more of my works!</p>
