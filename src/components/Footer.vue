@@ -2,6 +2,37 @@
 defineProps<{ 
   curr: string
 }>()
+
+import { ref } from 'vue'
+import { collection, addDoc } from "firebase/firestore"; 
+import { db } from "../utils/firebase";
+
+const msg = ref("");
+
+const onSubmit = async (e: Event) => {
+  e.preventDefault();
+  e.stopPropagation();
+  console.log("AA")
+
+  const feedback = (document.getElementById("feedback") as HTMLInputElement).value;
+  const name = (document.getElementById("name") as HTMLInputElement).value;
+  const contact = (document.getElementById("contact") as HTMLInputElement).value;
+  const selfPromo = (document.getElementById("self-promo") as HTMLInputElement).value;
+
+  try {
+    const docRef = await addDoc(collection(db, "feedback"), {
+      feedback: feedback,
+      name: name,
+      contact: contact,
+      selfPromo: selfPromo,
+    });
+    console.log("Document written with ID: ", docRef.id);
+    msg.value = "Thank you for your feedback!";
+  } catch (e) {
+    console.error("Error adding document: ", e);
+    msg.value = "Error adding document: " + e;
+  }
+}
 </script>
 
 <template>
@@ -11,23 +42,23 @@ defineProps<{
       <section class="w-full md:w-auto mb-12 md:mb-0">
         <img src="../assets/Feedback.svg" alt="Feedback" class="h-[2.5rem] mb-3"/>
         <p class="mb-3">Thank you for visiting my site! Let me know your thoughts on it.</p>
-        <form class="flex flex-col">
+        <form class="flex flex-col" @submit="onSubmit">
           <p class="font-bold text-coral-t">Feedback*</p>
-          <textarea class="bg-teal-t rounded-lg text-white py-1 px-3 mb-2 font-semibold" placeholder="What can be better? Are there any features you'd like to see?" type="text" maxlength="5000" />
+          <textarea id="feedback" name="feedback" class="bg-teal-t rounded-lg text-white py-1 px-3 mb-2 font-semibold" placeholder="What can be better? Are there any features you'd like to see?" type="text" maxlength="5000" required />
           <div class="flex flex-col md:flex-row justify-between">
           <div class="flex flex-col">
           Your name (optional)
-          <input class="bg-teal-t rounded-lg text-white py-1 px-3 mb-2" placeholder="What should I call you?" type="text" maxlength="50" />
+          <input id="name" name="name"class="bg-teal-t rounded-lg text-white py-1 px-3 mb-2" placeholder="What should I call you?" type="text" maxlength="50" />
           </div>
           <div class="flex flex-col w-full md:ml-3">
           Contact (optional)
-          <input class="bg-teal-t rounded-lg text-white py-1 px-3 mb-2" placeholder="Username (Platform)" type="text" maxlength="50" />
+          <input id="contact" name="contact" class="bg-teal-t rounded-lg text-white py-1 px-3 mb-2" placeholder="Username (Platform)" type="text" maxlength="50" />
           </div>
           </div>
           Self-promotion :D (optional)
-          <input class="bg-teal-t rounded-lg text-white py-1 px-3 mb-2" placeholder="Anything you'd like me to check out?" type="text" maxlength="50" />
-          <button value="Submit" class="my-2 w-1/2 md:w-1/3 py-2 px-3 bg-coral-t rounded-3xl hover:bg-teal-t text-white duration-200 font-bold" disabled="true">Send feedback</button>
-          *The feedback feature is still in development. It's a dummy.
+          <input id="self-promo" name="self-promo" class="bg-teal-t rounded-lg text-white py-1 px-3 mb-2" placeholder="Anything you'd like me to check out?" type="text" maxlength="50" />
+          <button value="Submit" class="my-2 w-1/2 md:w-1/3 py-2 px-3 bg-coral-t rounded-3xl hover:bg-teal-t text-white duration-200 font-bold">Send feedback</button>
+          {{ msg }}
         </form>
       </section>
       <!-- SOCIAL MEDIA -->
