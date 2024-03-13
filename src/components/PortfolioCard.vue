@@ -40,7 +40,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="rounded-xl bg-coral-500 bg-[url('./assets/texture-25.png')] bg-blend-overlay relative w-full text-center p-4 md:p-6 shadow-xl text-white" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
+  <div class="min-w-64 rounded-xl bg-coral-500 bg-[url('./assets/texture-25.png')] bg-blend-overlay relative w-full text-center p-4 md:p-6 shadow-xl text-white" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
     <div class="relative shadow-xl">
       <img :src="image" class="rounded-xl" />
       <video :src="video" v-if="play" class="absolute rounded-xl bottom-0" autoplay loop muted />
