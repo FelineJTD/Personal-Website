@@ -1,18 +1,17 @@
 <script setup lang="ts">
-defineProps<{ 
-  curr: string
-}>()
-
 import { ref } from 'vue'
 import { collection, addDoc } from "firebase/firestore"; 
 import { db } from "../utils/firebase";
+
+defineProps<{ 
+  curr: string
+}>()
 
 const msg = ref("");
 
 const onSubmit = async (e: Event) => {
   e.preventDefault();
   e.stopPropagation();
-  console.log("AA")
 
   const feedback = (document.getElementById("feedback") as HTMLInputElement).value;
   const name = (document.getElementById("name") as HTMLInputElement).value;
