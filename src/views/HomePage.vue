@@ -64,9 +64,8 @@ import PortfolioCard from '../components/PortfolioCard.vue';
 <template>
   <div class="bg-coral-100 bg-[url('./assets/texture-small.png')] bg-blend-overlay bg-repeat min-h-screen text-teal-t pt-16 lg:pt-12 overflow-x-hidden">
 
-    <!--  my-24 md:my-12 xl:my-24 lg:gap-6 xl:gap-[5%] lg:flex-row h-fit max-h-[100vh] w-full items-center justify-center lg:-ml-12 -mb-24 px-[8%] -->
     <!--- SECTION I -->
-    <section class="flex flex-col lg:flex-row items-center justify-center" @mousemove="onMousemove">
+    <section class="flex flex-col lg:flex-row xl:gap-12 items-center justify-center min-h-[80vh]" @mousemove="onMousemove">
       <!-- left -->
       <div class="bg-coral-500 relative h-64 md:h-96 lg:h-[60vh] xl:h-[50vh] aspect-square -p-12 overflow-hidden">
         <img src="../assets/homepage/bottom.png" alt="" class="absolute" :style="{ transform: `translate(${-x*75}px, ${-y*30}px)` }" />
@@ -79,12 +78,12 @@ import PortfolioCard from '../components/PortfolioCard.vue';
         </div>
       </div>
       <!-- right -->
-      <div class="text-center lg:text-left py-6 pr-16">
+      <div class="text-center lg:text-left py-6 lg:pr-16">
         <img src="../assets/homepage/hi_im_feli.svg" alt="Hi, I'm Feli" class="h-[3rem] md:h-[3.5rem] lg:-translate-x-3 mb-6 w-full lg:w-auto" />
         <p class="text-2xl font-black">My <span class="text-coral-t">profession</span>?</p>
         <p class="text-xl">Why don't you guess it?</p>
         <!-- hangman -->
-        <div class="flex flex-col w-full items-center my-12">
+        <div class="flex flex-col w-full items-center mt-12">
           <div class="flex">
             <Blank char="W" :filled="keyState('W')" :fin="cont" />
             <Blank char="E" :filled="keyState('E')" :fin="cont"/>
@@ -137,9 +136,9 @@ import PortfolioCard from '../components/PortfolioCard.vue';
       </div>
     </section>
     <!-- cont. -->
-    <div class="flex w-full justify-center">
+    <div class="flex w-full justify-center lmd:absolute bottom-24 lg:bottom-32">
       <a href="#introduction" :class="cont? 'block min-w-[5rem] h-6':'hidden'">
-        <button class="flex flex-col items-center animate-bounce mt-12 lg:mt-0 lg:absolute hover:font-bold hover:text-coral-t duration-200" :class="cont? 'visible':'invisible'">
+        <button class="flex flex-col items-center animate-bounce mt-4 lg:mt-0 lg:absolute hover:font-bold hover:text-coral-t duration-200" :class="cont? 'visible':'invisible'">
           <p class="animate-fadeIn mb-1 font-semibold">continue</p>
           <img src="../assets/homepage/arrow-down.svg" alt="" class="w-4 h-4 animate-fadeIn" />
         </button>
