@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 import { collection, addDoc } from "firebase/firestore"; 
 import { db } from "../utils/firebase";
-
-defineProps<{ 
-  curr: string
-}>()
 
 const msg = ref("");
 
@@ -32,6 +28,10 @@ const onSubmit = async (e: Event) => {
     msg.value = "Error adding document: " + e;
   }
 }
+
+defineProps<{ 
+  curr: string
+}>();
 </script>
 
 <template>
