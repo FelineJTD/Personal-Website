@@ -1,37 +1,37 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { collection, addDoc } from "firebase/firestore"; 
-import { db } from "../utils/firebase";
+  import { ref } from "vue";
+  import { collection, addDoc } from "firebase/firestore"; 
+  import { db } from "../utils/firebase";
 
-const msg = ref("");
+  const msg = ref("");
 
-const onSubmit = async (e: Event) => {
-  e.preventDefault();
-  e.stopPropagation();
+  const onSubmit = async (e: Event) => {
+    e.preventDefault();
+    e.stopPropagation();
 
-  const feedback = (document.getElementById("feedback") as HTMLInputElement).value;
-  const name = (document.getElementById("name") as HTMLInputElement).value;
-  const contact = (document.getElementById("contact") as HTMLInputElement).value;
-  const selfPromo = (document.getElementById("self-promo") as HTMLInputElement).value;
+    const feedback = (document.getElementById("feedback") as HTMLInputElement).value;
+    const name = (document.getElementById("name") as HTMLInputElement).value;
+    const contact = (document.getElementById("contact") as HTMLInputElement).value;
+    const selfPromo = (document.getElementById("self-promo") as HTMLInputElement).value;
 
-  try {
-    const docRef = await addDoc(collection(db, "feedback"), {
-      feedback: feedback,
-      name: name,
-      contact: contact,
-      selfPromo: selfPromo,
-    });
-    console.log("Document written with ID: ", docRef.id);
-    msg.value = "Thank you for your feedback!";
-  } catch (e) {
-    console.error("Error adding document: ", e);
-    msg.value = "Error adding document: " + e;
+    try {
+      const docRef = await addDoc(collection(db, "feedback"), {
+        feedback: feedback,
+        name: name,
+        contact: contact,
+        selfPromo: selfPromo,
+      });
+      console.log("Document written with ID: ", docRef.id);
+      msg.value = "Thank you for your feedback!";
+    } catch (e) {
+      console.error("Error adding document: ", e);
+      msg.value = "Error adding document: " + e;
+    }
   }
-}
 
-defineProps<{ 
-  curr: string
-}>();
+  const props = defineProps({ 
+    curr: String
+  });
 </script>
 
 <template>
