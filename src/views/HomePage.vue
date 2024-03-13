@@ -62,23 +62,24 @@ import PortfolioCard from '../components/PortfolioCard.vue';
 </script>
 
 <template>
-  <div class="bg-coral-100 bg-[url('./assets/texture-25.png')] bg-blend-overlay bg-repeat min-h-screen text-teal-t pt-16 lg:pt-12 overflow-x-hidden">
+  <div class="bg-coral-100 bg-[url('./assets/texture-small.png')] bg-blend-overlay bg-repeat min-h-screen text-teal-t pt-16 lg:pt-12 overflow-x-hidden">
 
+    <!--  my-24 md:my-12 xl:my-24 lg:gap-6 xl:gap-[5%] lg:flex-row h-fit max-h-[100vh] w-full items-center justify-center lg:-ml-12 -mb-24 px-[8%] -->
     <!--- SECTION I -->
-    <section class="flex flex-col my-24 md:my-12 xl:my-24 lg:gap-6 xl:gap-[5%] lg:flex-row h-fit max-h-[100vh] w-full items-center justify-center lg:-ml-12 -mb-24 px-[8%]" @mousemove="onMousemove">
+    <section class="flex flex-col lg:flex-row items-center justify-center" @mousemove="onMousemove">
       <!-- left -->
-      <div>
-        <div class="bg-coral-500 relative h-64 md:h-96 lg:h-[75vh] xl:h-[50vh] aspect-square -p-12 overflow-hidden">
-          <img src="../assets/homepage/bottom.png" alt="" class="absolute" :style="{ transform: `translate(${-x*75}px, ${-y*30}px)` }" />
-          <img src="../assets/homepage/mid.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*50}px, ${-y*17}px)` }" />
-          <img src="../assets/homepage/top.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*35}px, ${-y*15}px)` }" />
-          <img src="../assets/homepage/cover.svg" alt="" class="absolute object-cover scale-105" />
-          <img src="../assets/homepage/circles.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*20}px, ${-y*10}px)` }" />
-          <img src="../assets/texture-25.png" alt="" class="absolute w-full h-full mix-blend-overlay" />
+      <div class="bg-coral-500 relative h-64 md:h-96 lg:h-[60vh] xl:h-[50vh] aspect-square -p-12 overflow-hidden">
+        <img src="../assets/homepage/bottom.png" alt="" class="absolute" :style="{ transform: `translate(${-x*75}px, ${-y*30}px)` }" />
+        <img src="../assets/homepage/mid.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*50}px, ${-y*17}px)` }" />
+        <img src="../assets/homepage/top.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*35}px, ${-y*15}px)` }" />
+        <img src="../assets/homepage/cover.svg" alt="" class="absolute object-cover scale-105" />
+        <img src="../assets/homepage/circles.svg" alt="" class="absolute" :style="{ transform: `translate(${-x*20}px, ${-y*10}px)` }" />
+        <div class="absolute w-full h-full mix-blend-overlay overflow-hidden">
+          <img src="../assets/texture.png" alt="" class="min-h-[312px] min-w-[312px] w-full h-full object-cover"/>
         </div>
       </div>
       <!-- right -->
-      <div class="text-center lg:text-left py-6">
+      <div class="text-center lg:text-left py-6 pr-16">
         <img src="../assets/homepage/hi_im_feli.svg" alt="Hi, I'm Feli" class="h-[3rem] md:h-[3.5rem] lg:-translate-x-3 mb-6 w-full lg:w-auto" />
         <p class="text-2xl font-black">My <span class="text-coral-t">profession</span>?</p>
         <p class="text-xl">Why don't you guess it?</p>
