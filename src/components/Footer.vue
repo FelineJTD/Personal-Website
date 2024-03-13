@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { ref } from "vue";
-  import { collection, addDoc } from "firebase/firestore"; 
+  import { doc, setDoc } from "firebase/firestore"; 
   import { db } from "../utils/firebase";
 
   const msg = ref("");
@@ -14,14 +14,17 @@
     const contact = (document.getElementById("contact") as HTMLInputElement).value;
     const selfPromo = (document.getElementById("self-promo") as HTMLInputElement).value;
 
+    const currTime = new Date();
+    const randomString = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    const id = currTime.toISOString() + "." + randomString;
+
     try {
-      const docRef = await addDoc(collection(db, "feedback"), {
+      await setDoc(doc(db, "feedback", id), {
         feedback: feedback,
         name: name,
         contact: contact,
         selfPromo: selfPromo,
       });
-      console.log("Document written with ID: ", docRef.id);
       msg.value = "Thank you for your feedback!";
     } catch (e) {
       console.error("Error adding document: ", e);
