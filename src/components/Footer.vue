@@ -47,7 +47,7 @@
           <div class="flex flex-col md:flex-row justify-between">
           <div class="flex flex-col">
           Your name (optional)
-          <input id="name" name="name"class="bg-teal-t rounded-lg text-white py-1 px-3 mb-2" placeholder="What should I call you?" type="text" maxlength="50" />
+          <input id="name" name="name" class="bg-teal-t rounded-lg text-white py-1 px-3 mb-2" placeholder="What should I call you?" type="text" maxlength="50" />
           </div>
           <div class="flex flex-col w-full md:ml-3">
           Contact (optional)
