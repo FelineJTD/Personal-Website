@@ -1,93 +1,138 @@
 [
-  { "title": "Personal Journal", 
-    "desc": "My personal journal! I write about my life, my thoughts, and my experiences. I also display some of my original artworks.", 
+  {
+    "title": "Personal Journal",
+    "desc": "My personal journal! I write about my life, my thoughts, and my experiences. I also display some of my original artworks.",
     "isLinkActive": true,
-    "link": "https://journal.feliciasutandijo.my.id", 
-    "image": "/portfolio-thumbnail/journal.png", 
-    "video": "/portfolio-thumbnail/journal.mp4"    
+    "link": "https://journal.feliciasutandijo.my.id",
+    "image": "/portfolio-thumbnail/journal.png",
+    "video": "/portfolio-thumbnail/journal.mp4"
   },
-  { "title": "JDIH Kemlu", 
-    "desc": "Ministry of Foreign Affairs of the Republic of Indonesia's Legal Information Center (JDIH) website. This website is used to manage and display legal documents.", 
+  {
+    "title": "JDIH Kemlu",
+    "desc": "Ministry of Foreign Affairs of the Republic of Indonesia's Legal Information Center (JDIH) website. This website is used to manage and display legal documents.",
     "isLinkActive": true,
-    "link": "https://jdih.kemlu.go.id/", 
-    "image": "/portfolio-thumbnail/jdih-kemlu.png", 
-    "video": "/portfolio-thumbnail/jdih-kemlu.mp4"    
+    "link": "https://jdih.kemlu.go.id/",
+    "image": "/portfolio-thumbnail/jdih-kemlu.png",
+    "video": "/portfolio-thumbnail/jdih-kemlu.mp4"
   },
-  { "title": "Sedjuk Bakmi & Kopi", 
-    "desc": "A brand website for a noodle and coffee restaurant. This website features company information, locations, menu, and gallery.", 
+  {
+    "title": "Sedjuk Bakmi & Kopi",
+    "desc": "A brand website for a noodle and coffee restaurant. This website features company information, locations, menu, and gallery.",
     "isLinkActive": true,
-    "link": "https://sedjuk.com", 
-    "image": "/portfolio-thumbnail/sedjuk.png", 
-    "video": "/portfolio-thumbnail/sedjuk.mp4"    
+    "link": "https://sedjuk.com",
+    "image": "/portfolio-thumbnail/sedjuk.png",
+    "video": "/portfolio-thumbnail/sedjuk.mp4"
   },
-  { "title": "Hyundai E-Kiosk", 
-    "desc": "An e-kiosk application for Hyundai Motor Company enabling customers to order spare parts and services independently without having to speak with staffs.", 
+  {
+    "title": "AYANA AI Chatbot",
+    "desc": "A chatbot for AYANA Resort and Spa Bali. This chatbot is designed to help customers book rooms, check availability, and answer frequently asked questions.",
+    "isLinkActive": true,
+    "link": "https://booking-ai.ayana.com/demo",
+    "image": "/portfolio-thumbnail/ayana.png",
+    "video": "/portfolio-thumbnail/ayana.mp4"
+  },
+  {
+    "title": "Braga Technologies",
+    "desc": "A company website for Braga Technologies, displaying the company's profile, services, and portfolio. Notably, I am really proud of this website's complex animations.",
+    "isLinkActive": true,
+    "link": "https://braga.co.id",
+    "image": "/portfolio-thumbnail/braga.png",
+    "video": "/portfolio-thumbnail/braga.mp4"
+  },
+  {
+    "title": "Employee Virtual Assistant",
+    "desc": "A virtual assistant for employees. This chatbot is designed to help employees with their daily tasks, such as scheduling meetings, and inquiries.",
+    "isLinkActive": true,
+    "link": "https://employee-virtual-assistant-fe.onrender.com/",
+    "image": "/portfolio-thumbnail/assistant.png",
+    "video": "/portfolio-thumbnail/assistant.mp4"
+  },
+  {
+    "title": "Effie",
+    "desc": "Effie is a web-based application that helps users to manage links. It's like a Google Drive for links! Or maybe a next level bookmarking tool.",
+    "isLinkActive": true,
+    "link": "https://effie.boo",
+    "image": "/portfolio-thumbnail/effie.png",
+    "video": "/portfolio-thumbnail/effie.mp4"
+  },
+  {
+    "title": "Langbot",
+    "desc": "A language-learning chatbot app I created as a gift for my IISMA mentees. This chatbot is designed to help them learn their target languages in real-life conversational situations.",
+    "isLinkActive": true,
+    "link": "https://langbot.feliciasutandijo.my.id",
+    "image": "/portfolio-thumbnail/langbot.jpg",
+    "video": "/portfolio-thumbnail/langbot.mp4"
+  },
+  {
+    "title": "Hyundai E-Kiosk",
+    "desc": "An e-kiosk application for Hyundai Motor Company enabling customers to order spare parts and services independently without having to speak with staffs.",
     "isLinkActive": false,
-    "link": "-", 
-    "image": "/portfolio-thumbnail/hyundai-ekiosk.png", 
-    "video": ""    
+    "link": "-",
+    "image": "/portfolio-thumbnail/hyundai-ekiosk.png",
+    "video": ""
   },
-  { "title": "Hyundai QMS", 
-    "desc": "A queueing management system built for Hyundai Motor Company. This system is used to manage the queue of customers waiting to get their cars serviced.", 
+  {
+    "title": "Hyundai QMS",
+    "desc": "A queueing management system built for Hyundai Motor Company. This system is used to manage the queue of customers waiting to get their cars serviced.",
     "isLinkActive": false,
-    "link": "-", 
-    "image": "/portfolio-thumbnail/hyundai-qms.png", 
-    "video": ""    
+    "link": "-",
+    "image": "/portfolio-thumbnail/hyundai-qms.png",
+    "video": ""
   },
-  { "title": "Effie", 
-    "desc": "Effie is a web-based application that helps users to manage links. It's like a Google Drive for links! Or maybe a next level bookmarking tool.", 
+  {
+    "title": "Architecture 3D Mock Portfolio",
+    "desc": "A 3D mock portfolio for an architecture student. This website features a 3D model of a building that can be rotated and zoomed in.",
     "isLinkActive": true,
-    "link": "https://effie.boo", 
-    "image": "/portfolio-thumbnail/effie.png", 
-    "video": "/portfolio-thumbnail/effie.mp4"    
+    "link": "https://three-js-archi-porto.vercel.app/",
+    "image": "/portfolio-thumbnail/archi.png",
+    "video": "/portfolio-thumbnail/archi.mp4"
   },
-  { "title": "Braga Technologies", 
-    "desc": "A company website for Braga Technologies, displaying the company's profile, services, and portfolio. Notably, I am really proud of this website's complex animations.", 
-    "isLinkActive": true,
-    "link": "https://braga.co.id", 
-    "image": "/portfolio-thumbnail/braga.png", 
-    "video": "/portfolio-thumbnail/braga.mp4"    
-  },
-  { "title": "Geodashboard", 
-    "desc": "A promotional website for the Geodashboard product by Braga Technologies. This website features a complex animation that showcases the product's features.", 
+  {
+    "title": "Wispril ITB 2022",
+    "desc": "A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more.",
     "isLinkActive": false,
-    "link": "-", 
-    "image": "/portfolio-thumbnail/geodashboard.png", 
-    "video": "/portfolio-thumbnail/geodashboard.mp4"    
-  },
-  { "title": "Wispril ITB 2022", 
-    "desc": "A graduation website created to celebrate the April 2022 graduation of ITB students. This website includes features like wall of fame, success stories, and more.", 
-    "isLinkActive": false,
-    "link": "https://paradewisudaitb.com", 
-    "image": "/portfolio-thumbnail/wispril.png", 
+    "link": "https://paradewisudaitb.com",
+    "image": "/portfolio-thumbnail/wispril.png",
     "video": "/portfolio-thumbnail/wispril.mp4"
   },
-  { "title": "Joyume", 
+  {
+    "title": "Happy Birthday!",
+    "desc": "A personal project to celebrate my friends' birthdays. This website enables all of our friends to write birthday wishes and messages for the birthday person, as well as upload photos and videos.",
+    "isLinkActive": true,
+    "link": "https://hbd.feliciasutandijo.my.id",
+    "image": "/portfolio-thumbnail/hbd.png",
+    "video": "/portfolio-thumbnail/hbd.mp4"
+  },
+  {
+    "title": "Joyume",
     "desc": "Joyume offers kids a unique experience of customising and personalising their own toys, called 'Joyu Friends', which will be specifically created and delivered upon order.",
-    "isLinkActive": true, 
-    "link": "https://joyume.netlify.app/", 
-    "image": "/portfolio-thumbnail/joyume.png", 
+    "isLinkActive": true,
+    "link": "https://joyume.netlify.app/",
+    "image": "/portfolio-thumbnail/joyume.png",
     "video": "/portfolio-thumbnail/joyume.mp4"
   },
-  { "title": "Wisjul ITB 2022", 
-    "desc": "A graduation website created to celebrate the July 2021 graduation of ITB students. I created the landing page, complete with elaborate animations and interactions.", 
+  {
+    "title": "Wisjul ITB 2022",
+    "desc": "A graduation website created to celebrate the July 2021 graduation of ITB students. I created the landing page, complete with elaborate animations and interactions.",
     "isLinkActive": false,
-    "link": "https://wisjulitb.com", 
-    "image": "/portfolio-thumbnail/wisjul.png", 
+    "link": "https://wisjulitb.com",
+    "image": "/portfolio-thumbnail/wisjul.png",
     "video": "/portfolio-thumbnail/wisjul.mp4"
   },
-  { "title": "Mealth", 
-    "desc": "A website featuring a chatbot. Mealth is a safe, comfortable, and supportive space seeking to help and raise awareness about eating disorders in Indonesia.", 
+  {
+    "title": "Mealth",
+    "desc": "A website featuring a chatbot. Mealth is a safe, comfortable, and supportive space seeking to help and raise awareness about eating disorders in Indonesia.",
     "isLinkActive": true,
-    "link": "https://mealth.netlify.app", 
-    "image": "/portfolio-thumbnail/mealth.png", 
+    "link": "https://mealth.netlify.app",
+    "image": "/portfolio-thumbnail/mealth.png",
     "video": "/portfolio-thumbnail/mealth.mp4"
   },
-  { "title": "Deoxyde", 
-    "desc": "A school project implementing string matching and regular expression for a mock DNA matching to detect illnesses.", 
+  {
+    "title": "Deoxyde",
+    "desc": "A school project implementing string matching and regular expression for a mock DNA matching to detect illnesses.",
     "isLinkActive": true,
-    "link": "https://deoxyde.netlify.app", 
-    "image": "/portfolio-thumbnail/deoxyde.png", 
+    "link": "https://deoxyde.netlify.app",
+    "image": "/portfolio-thumbnail/deoxyde.png",
     "video": "/portfolio-thumbnail/deoxyde.mp4"
   }
 ]
