@@ -398,6 +398,19 @@ import PortfolioCard from "../components/PortfolioCard.vue";
         By the way, <span class="text-white">this website</span> is designed,
         illustrated, and coded entirely by me ;)
       </p>
+
+      <h1 class="mb-4">Design and UI/UX Portfolio</h1>
+      <p class="max-w-[60rem] mb-12">
+        This website is mainly designed to include my web development portfolio.
+        For my design and UI/UX portfolio, please visit
+        <a
+          href="https://www.playbook.com/s/portfolio-felisutandijo/Jwjz2BXrTpm3fydznTaFr29r"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="text-teal-t underline hover:text-coral-t duration-300 cursor-pointer z-[45] relative"
+          >//www.playbook.com/s/portfolio-felisutandijo/Jwjz2BXrTpm3fydznTaFr29r.</a
+        >
+      </p>
     </section>
   </div>
 </template>
