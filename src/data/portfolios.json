@@ -18,7 +18,7 @@
   {
     "title": "Sedjuk Bakmi & Kopi",
     "desc": "A brand website for a noodle and coffee restaurant. This website features company information, locations, menu, and gallery.",
-    "isLinkActive": true,
+    "isLinkActive": false,
     "link": "https://sedjuk.com",
     "image": "/portfolio-thumbnail/sedjuk.png",
     "video": "/portfolio-thumbnail/sedjuk.mp4"
