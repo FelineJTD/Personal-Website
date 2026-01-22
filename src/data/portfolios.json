@@ -8,6 +8,14 @@
     "video": "/portfolio-thumbnail/journal.mp4"
   },
   {
+    "title": "Geologbook",
+    "desc": "A web application to create and share personal custom maps, enabling users to add point, line, and polygon markers.",
+    "isLinkActive": true,
+    "link": "https://logbook.id",
+    "image": "/portfolio-thumbnail/geologbook.png",
+    "video": "/portfolio-thumbnail/geologbook.mp4"
+  },
+  {
     "title": "JDIH Kemlu",
     "desc": "Ministry of Foreign Affairs of the Republic of Indonesia's Legal Information Center (JDIH) website. This website is used to manage and display legal documents.",
     "isLinkActive": true,
